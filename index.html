@@ -4,31 +4,44 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Roof Repair Burleson TX | DFW Roofing Specialist</title>
+<title>Roof Repair Burleson TX | Josh Holland Roofing</title>
 
-<meta name="description" content="Roof repair, inspections, and storm damage roofing in Burleson TX and across Johnson County, Tarrant County, and DFW. Call today for a free inspection.">
+<meta name="description" content="Roof repair, inspections, and storm damage roofing in Burleson TX. Serving Johnson County, Tarrant County, and DFW. Call Josh Holland today.">
 
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body {
+*{box-sizing:border-box;}
+
+body{
 margin:0;
-font-family:'Inter', sans-serif;
+font-family:'Inter',sans-serif;
 background:#0b0b0b;
-color:white;
+color:#fff;
 }
 
-h1,h2,h3 {
-font-family:'Oswald', sans-serif;
+h1,h2,h3{
+font-family:'Oswald',sans-serif;
 letter-spacing:1px;
 }
 
-.gold { color:#d4a25a; }
+.gold{color:#d4a25a;}
+
+/* HEADER */
+header{
+position:absolute;
+top:0;
+left:0;
+padding:20px;
+z-index:10;
+}
+
+header img{height:45px;}
 
 /* HERO */
-.hero {
-background:url('main-roof.jpg') center/cover no-repeat;
+.hero{
 height:100vh;
+background:url('main-roof.jpg') center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -36,92 +49,84 @@ text-align:center;
 position:relative;
 }
 
-.hero::before {
+.hero::before{
 content:'';
 position:absolute;
 inset:0;
-background:linear-gradient(to bottom, rgba(0,0,0,.7), rgba(0,0,0,.95));
+background:linear-gradient(to bottom, rgba(0,0,0,.75), rgba(0,0,0,.95));
 }
 
-.hero-content {
+.hero-content{
 position:relative;
 max-width:850px;
 padding:20px;
 }
 
-.hero img {
+.hero img{
 width:160px;
+border-radius:50%;
+border:3px solid #d4a25a;
 margin-bottom:20px;
 }
 
-.hero h1 {
+.hero h1{
 font-size:64px;
 margin:0;
 }
 
-.hero p {
+.hero h2{
+color:#d4a25a;
+margin-top:10px;
+}
+
+.hero p{
 color:#ccc;
 margin-top:15px;
 font-size:18px;
 }
 
-.btn {
+.btn{
 display:inline-block;
 margin-top:30px;
 padding:18px 40px;
 background:#d4a25a;
-color:black;
+color:#000;
 font-weight:700;
 text-decoration:none;
-letter-spacing:1px;
 }
 
 /* SECTION */
-.section {
+.section{
 padding:90px 25px;
 max-width:1200px;
 margin:auto;
 }
 
-/* SERVICES GRID */
-.grid {
+/* SERVICES */
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:25px;
+margin-top:40px;
 }
 
-.card {
+.card{
 background:#141414;
 border:1px solid #222;
-transition:0.3s;
+transition:.3s;
 }
 
-.card:hover {
-transform:translateY(-5px);
+.card:hover{
+transform:translateY(-6px);
 border-color:#d4a25a;
 }
 
-.card img {
-width:100%;
-}
+.card img{width:100%;}
 
-.card-content {
-padding:20px;
-}
-
-/* SPLIT */
-.split {
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center;
-margin-top:60px;
-}
-
-.split img { width:100%; }
+.card-content{padding:20px;}
 
 /* MEET */
-.meet {
+.meet{
 display:grid;
 grid-template-columns:280px 1fr;
 gap:40px;
@@ -129,7 +134,7 @@ align-items:center;
 }
 
 /* LOCATIONS */
-.locations {
+.locations{
 text-align:center;
 color:#d4a25a;
 font-weight:600;
@@ -137,25 +142,24 @@ font-size:18px;
 }
 
 /* SEO TEXT */
-.seo {
+.seo{
 color:#bbb;
 line-height:1.8;
+margin-top:20px;
 }
 
 /* CTA */
-.cta {
-text-align:center;
-}
+.cta{text-align:center;}
 
 /* FOOTER */
-footer {
+footer{
 text-align:center;
 padding:30px;
 color:#777;
 }
 
 /* STICKY */
-.sticky {
+.sticky{
 position:fixed;
 bottom:0;
 width:100%;
@@ -164,38 +168,58 @@ text-align:center;
 padding:15px;
 }
 
-.sticky a {
-color:black;
+.sticky a{
+color:#000;
 font-weight:bold;
 text-decoration:none;
 }
 
 /* MOBILE */
 @media(max-width:768px){
-.hero h1 { font-size:40px; }
-.split { grid-template-columns:1fr; }
-.meet { grid-template-columns:1fr; text-align:center; }
+.hero h1{font-size:40px;}
+.meet{grid-template-columns:1fr;text-align:center;}
 }
 </style>
 </head>
 
 <body>
 
+<header>
+<img src="logo.png">
+</header>
+
+<!-- HERO -->
 <section class="hero">
 <div class="hero-content">
 
-<img src="logo.png">
+<img src="josh.jpg">
 
-<h1>BURLESON TX <span class="gold">ROOF REPAIR</span></h1>
+<h1>MEET JOSH HOLLAND</h1>
 
-<p>Local Roofing Specialist Serving Burleson & DFW</p>
-<p>Johnson County • Tarrant County • Full DFW Coverage</p>
+<h2>BURLESON TX ROOF REPAIR</h2>
 
-<a href="tel:16822720473" class="btn">CALL FOR FREE INSPECTION</a>
+<p>Serving Burleson • Johnson County • Tarrant County • DFW</p>
+<p>Free roof inspections • No pressure • Honest answers</p>
+
+<a href="tel:16822720473" class="btn">CALL OR TEXT JOSH</a>
 
 </div>
 </section>
 
+<!-- INTRO -->
+<section class="section">
+
+<h2 style="text-align:center;">ROOF REPAIR IN BURLESON TX</h2>
+
+<p style="text-align:center; max-width:750px; margin:auto;">
+If you're dealing with roof damage or think you may have hail damage, I provide free roof inspections
+in Burleson and throughout Johnson County and Tarrant County. My goal is simple — give you a clear,
+honest understanding of your roof so you can make the right decision.
+</p>
+
+</section>
+
+<!-- SERVICES -->
 <section class="section">
 
 <h2 style="text-align:center;">ROOFING SERVICES</h2>
@@ -206,7 +230,7 @@ text-decoration:none;
 <img src="assessment.jpg">
 <div class="card-content">
 <h3>Roof Inspections</h3>
-<p>Free inspections to identify damage and give you clear answers.</p>
+<p>Free inspections to identify hail damage, leaks, and overall condition.</p>
 </div>
 </div>
 
@@ -214,7 +238,7 @@ text-decoration:none;
 <img src="insurance.jpg">
 <div class="card-content">
 <h3>Storm Damage</h3>
-<p>We assess hail and wind damage with accuracy and honesty.</p>
+<p>Accurate storm damage assessments with clear, honest explanations.</p>
 </div>
 </div>
 
@@ -230,43 +254,56 @@ text-decoration:none;
 
 </section>
 
+<!-- MEET -->
 <section class="section">
 <div class="meet">
+
 <img src="josh.jpg">
+
 <div>
-<h2>MEET YOUR ROOFING SPECIALIST</h2>
+<h2>WHO YOU'RE WORKING WITH</h2>
 <p>
-I'm Josh Holland, a roofing specialist with Old Pro Roofing. I focus on honest inspections,
-clear communication, and helping homeowners make the right decision without pressure.
+I'm Josh Holland with Old Pro Roofing. I focus on honest inspections, clear communication,
+and helping homeowners understand exactly what’s going on with their roof.
+No pressure — just real answers and solid work.
 </p>
 </div>
+
 </div>
 </section>
 
+<!-- AREAS -->
 <section class="section">
 <h2 style="text-align:center;">AREAS WE SERVE</h2>
 <p class="locations">
-Burleson • Crowley • Cleburne • Mansfield • Arlington • Fort Worth • Johnson County • Tarrant County • DFW
+Burleson • Crowley • Cleburne • Johnson County • Tarrant County • DFW
 </p>
 </section>
 
+<!-- SEO CONTENT -->
 <section class="section">
-<h2>BURLESON TX ROOFING COMPANY</h2>
+
+<h2>BURLESON TX ROOFING SERVICES</h2>
+
 <p class="seo">
-If you're searching for roof repair in Burleson TX or roofing services anywhere in Johnson County,
-Tarrant County, or the greater Dallas-Fort Worth area, Old Pro Roofing provides professional inspections,
-storm damage assessments, and roof replacement services. Whether your roof has been impacted by hail,
-wind, or aging, getting a proper inspection is the first step to protecting your home.
+If you're searching for roof repair in Burleson TX, roof inspections in Johnson County,
+or storm damage roofing in Tarrant County and the greater Dallas-Fort Worth area,
+Josh Holland and Old Pro Roofing provides professional roofing services you can trust.
+Whether your roof has been impacted by hail, wind, or age, getting a proper inspection
+is the first step. We help homeowners throughout Burleson and surrounding areas
+understand their options and move forward with confidence.
 </p>
+
 </section>
 
+<!-- CTA -->
 <section class="section cta">
-<h2>CALL NOW FOR A FREE INSPECTION</h2>
+<h2>CALL NOW FOR A FREE ROOF INSPECTION</h2>
 <a href="tel:16822720473" class="btn">CALL (682) 272-0473</a>
 </section>
 
 <footer>
-Roofing Specialist | Old Pro Roofing | Burleson TX & DFW
+Old Pro Roofing | Josh Holland | Burleson TX Roofing
 </footer>
 
 <div class="sticky">

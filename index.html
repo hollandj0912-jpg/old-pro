@@ -14,8 +14,9 @@
 *{box-sizing:border-box;}
 body{margin:0;font-family:'Inter',sans-serif;background:#0b0b0b;color:#fff;}
 h1,h2,h3{font-family:'Oswald',sans-serif;line-height:1.2;}
-.section{padding:50px 20px;max-width:1100px;margin:auto;}
+.section{padding:60px 20px;max-width:1100px;margin:auto;}
 .center{text-align:center;}
+
 .btn{
 display:block;
 width:100%;
@@ -27,7 +28,9 @@ color:#000;
 text-decoration:none;
 font-weight:700;
 border-radius:6px;
+box-shadow:0 4px 12px rgba(0,0,0,.4);
 }
+
 a{color:#d4a25a;text-decoration:none;}
 
 /* HEADER */
@@ -54,17 +57,38 @@ position:relative;
 content:'';
 position:absolute;
 inset:0;
-background:linear-gradient(to bottom, rgba(0,0,0,.7), rgba(0,0,0,.95));
+background:linear-gradient(to bottom, rgba(0,0,0,.65), rgba(0,0,0,.95));
 }
 .hero-content{position:relative;max-width:650px;padding:20px;}
 .hero img{
-width:120px;
+width:130px;
 border-radius:50%;
 border:3px solid #d4a25a;
 margin-bottom:15px;
 }
-.hero h1{font-size:32px;margin-bottom:10px;}
+.hero h1{
+font-size:36px;
+font-weight:700;
+margin-bottom:10px;
+}
 .hero p{color:#ccc;font-size:15px;}
+
+/* SOCIAL BOXES */
+.social-top{
+display:flex;
+justify-content:center;
+gap:10px;
+margin-top:20px;
+flex-wrap:wrap;
+}
+.social-top a{
+padding:10px 16px;
+background:#141414;
+border:1px solid #222;
+border-radius:6px;
+font-size:14px;
+font-weight:600;
+}
 
 /* TRUST */
 .trust{
@@ -98,11 +122,6 @@ border-radius:8px;
 
 /* CONTACT */
 .contact p{margin:6px 0;font-size:14px;}
-.social a{
-display:inline-block;
-margin:6px 8px;
-font-weight:600;
-}
 
 /* STICKY */
 .sticky{
@@ -119,16 +138,15 @@ font-weight:bold;
 text-decoration:none;
 }
 
-/* DESKTOP BOOST */
+/* DESKTOP */
 @media(min-width:768px){
-.hero h1{font-size:42px;}
+.hero h1{font-size:44px;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- LOGO -->
 <header>
 <a href="https://www.oldproroofing.com" target="_blank">
 <img src="logo.png">
@@ -145,8 +163,14 @@ text-decoration:none;
 
 <p>Work directly with Josh Holland, backed by 20+ years of trusted experience with Old Pro Roofing, LLC.</p>
 
-<a href="tel:16822720473" class="btn">Get a Free Inspection</a>
 <a href="tel:16822720473" class="btn">Call Now</a>
+
+<!-- SOCIAL BOXES -->
+<div class="social-top">
+<a href="https://www.facebook.com/share/1CYvSMHYJh/?mibextid=wwXIfr" target="_blank">Facebook</a>
+<a href="https://www.instagram.com/oldprojosh" target="_blank">Instagram</a>
+<a href="https://www.tiktok.com/@oldprojosh" target="_blank">TikTok</a>
+</div>
 
 </div>
 </section>
@@ -164,7 +188,7 @@ text-decoration:none;
 <h2>A Better Roofing Experience</h2>
 <p>
 Most homeowners don’t know who to trust when it comes to their roof.<br><br>
-That’s why we keep things simple — honest inspections, clear communication, and quality work backed by a company that’s been doing this for over 20 years.<br><br>
+That’s why I keep things simple — honest inspections, clear communication, and quality work backed by a company that’s been doing this for over 20 years.<br><br>
 <br><br>
 — Josh Holland
 </p>
@@ -178,7 +202,7 @@ That’s why we keep things simple — honest inspections, clear communication, 
 <img src="assessment.jpg">
 <img src="replacement.jpg">
 <img src="insurance.jpg">
-<img src="assessment.jpg">
+<img src="damage.jpg">
 </div>
 </section>
 
@@ -190,6 +214,7 @@ That’s why we keep things simple — honest inspections, clear communication, 
 <div class="card">Roof Inspections</div>
 <div class="card">Roof Repairs</div>
 <div class="card">Full Roof Replacement</div>
+<div class="card">Insurance Assistance</div>
 </div>
 
 <a href="tel:16822720473" class="btn">View All Services</a>
@@ -220,18 +245,12 @@ That’s why we keep things simple — honest inspections, clear communication, 
 <section class="section center contact">
 <h2>Contact Josh</h2>
 
-<p><strong>Phone:</strong> (682) 272-0473</p>
-<p><strong>Email:</strong> j.holland@oldproroofing.com</p>
-<p><strong>Address:</strong> 140 W Eldred St, Burleson TX 76028</p>
+<p><strong>Phone:</strong> <a href="tel:16822720473">(682) 272-0473</a></p>
+<p><strong>Email:</strong> <a href="mailto:j.holland@oldproroofing.com">j.holland@oldproroofing.com</a></p>
+<p><strong>Address:</strong> <a href="https://maps.google.com/?q=140+W+Eldred+St+Burleson+TX+76028" target="_blank">140 W Eldred St, Burleson TX</a></p>
 
-<div class="social">
-<a href="https://www.facebook.com/share/1CYvSMHYJh/?mibextid=wwXIfr" target="_blank">Facebook</a>
-<a href="https://www.instagram.com/oldprojosh" target="_blank">Instagram</a>
-<a href="https://www.tiktok.com/@oldprojosh" target="_blank">TikTok</a>
-</div>
 </section>
 
-<!-- STICKY CTA -->
 <div class="sticky">
 <a href="tel:16822720473">TAP TO CALL NOW</a>
 </div>

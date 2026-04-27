@@ -1,260 +1,173 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Josh Holland | Roofing Specialist</title>
-<script src="//code.tidio.co/1zdp4rxpuorbn2knbdpctpbz2a2423gc.js" async></script>
+<title>Roof Repair Burleson TX | Old Pro Roofing</title>
+
+<meta name="description" content="Roof repair and free roof inspections in Burleson, Crowley, Cleburne, Mansfield, Arlington and Fort Worth. Honest roofing with no pressure. Call now.">
+
 <style>
-:root {
---bronze: #9c712c;
---black: #0a0a0a;
---asphalt: #141414;
---white: #ffffff;
---accent: #b8860b;
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #0e0e0e;
+color: #fff;
 }
 
-
-* { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
-body { font-family: 'Arial Black', sans-serif; background: var(--black); color: var(--white); line-height: 1.4; }
-
-
-/* NAVIGATION */
-nav {
-background: rgba(10, 10, 10, 0.98);
-padding: 15px 5%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-border-bottom: 4px solid var(--bronze);
-position: sticky; top: 0; z-index: 1000;
-box-shadow: 0 5px 20px rgba(0,0,0,0.8);
+header {
+padding: 15px;
+text-align: center;
+border-bottom: 1px solid #333;
 }
-.nav-links a { color: white; text-decoration: none; text-transform: uppercase; margin-left: 20px; font-size: 0.8rem; letter-spacing: 1px; transition: color 0.3s; }
-.nav-links a:hover { color: var(--bronze); }
 
-
-.logo-link { display: flex; align-items: center; cursor: pointer; transition: transform 0.2s; text-decoration: none; }
-.logo-link:hover { transform: scale(1.05); }
-
-
-/* TYPOGRAPHY */
-.huge-title { font-size: clamp(3rem, 10vw, 7.5rem); text-transform: uppercase; line-height: 0.8; letter-spacing: -3px; margin-bottom: 20px; text-shadow: 5px 5px 15px rgba(0,0,0,0.7); }
-.highlight { color: var(--bronze); }
-
-
-section { padding: 100px 10%; min-height: 90vh; border-bottom: 1px solid #222; }
-
-
-/* BUTTONS */
-.btn-action {
-display: inline-block; background: var(--bronze) !important; color: black !important;
-padding: 25px 50px; font-weight: 900; text-transform: uppercase;
-text-decoration: none; font-size: 1.4rem; border: none;
-box-shadow: 0 10px 30px rgba(156, 113, 44, 0.3);
-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-cursor: pointer;
+.logo {
+color: #d4a25a;
+font-weight: bold;
+font-size: 18px;
 }
-.btn-action:hover { background: var(--white) !important; transform: translateY(-5px); box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2); }
 
+.hero {
+padding: 40px 20px;
+text-align: center;
+}
 
-/* SERVICE GALLERY */
-.service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 50px; }
-.service-card { background: var(--asphalt); border: 1px solid #333; overflow: hidden; transition: 0.3s; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); }
-.service-card:hover { border-color: var(--bronze); transform: translateY(-10px); }
-.service-card img { width: 100%; height: 280px; object-fit: cover; border-bottom: 4px solid var(--bronze); background: #222; }
-.service-info { padding: 30px; }
-.service-info h3 { color: var(--bronze); margin-bottom: 15px; text-transform: uppercase; font-size: 1.5rem; }
-.service-info p { font-family: sans-serif; color: #bbb; font-size: 1rem; line-height: 1.6; }
+.hero h1 {
+font-size: 38px;
+margin-bottom: 10px;
+}
 
+.hero span {
+color: #d4a25a;
+}
 
-/* ABOUT */
-.about-flex { display: flex; flex-wrap: wrap; gap: 60px; align-items: center; }
-.about-img { flex: 1; min-width: 320px; border: 4px solid var(--bronze); box-shadow: 25px 25px 0px rgba(26, 26, 26, 0.8); }
-.about-text { flex: 1.2; min-width: 320px; }
+.hero p {
+font-size: 16px;
+color: #ccc;
+}
 
+.btn {
+display: inline-block;
+margin-top: 20px;
+padding: 15px 25px;
+background: #d4a25a;
+color: #000;
+text-decoration: none;
+font-weight: bold;
+border-radius: 5px;
+}
 
-/* CONTACT */
-.contact-box { background: linear-gradient(145deg, #141414, #0a0a0a); padding: 60px 20px; text-align: center; border: 1px solid #333; margin-top: 50px; border-radius: 5px; }
-.contact-detail { margin-bottom: 30px; }
-.contact-detail h4 { color: var(--bronze); text-transform: uppercase; font-size: 0.8rem; margin-bottom: 8px; }
-.contact-detail p, .contact-detail a { font-family: sans-serif; font-size: 1.4rem; color: white; text-decoration: none; font-weight: bold; transition: color 0.3s; }
-.contact-detail a:hover { color: var(--bronze); }
+.section {
+padding: 30px 20px;
+}
 
+.section h2 {
+text-align: center;
+margin-bottom: 20px;
+}
 
-.social-row { display: flex; justify-content: center; gap: 15px; margin-top: 40px; flex-wrap: wrap; }
-.social-btn { border: 2px solid var(--bronze); color: white !important; padding: 15px 30px; text-decoration: none; text-transform: uppercase; font-size: 0.9rem; font-weight: bold; transition: 0.3s; }
-.social-btn:hover { background: var(--bronze); color: black !important; }
+.card {
+background: #1a1a1a;
+padding: 20px;
+margin-bottom: 15px;
+border-radius: 8px;
+}
 
+.locations {
+text-align: center;
+font-weight: bold;
+color: #d4a25a;
+}
 
-@media (max-width: 768px) { .huge-title { font-size: 3.5rem; } section { padding: 60px 5%; } .nav-links { display: none; } }
+.footer {
+text-align: center;
+padding: 20px;
+font-size: 14px;
+color: #aaa;
+}
+
+.sticky-call {
+position: fixed;
+bottom: 0;
+width: 100%;
+background: #d4a25a;
+text-align: center;
+padding: 15px;
+}
+
+.sticky-call a {
+color: #000;
+font-weight: bold;
+text-decoration: none;
+}
 </style>
 </head>
+
 <body>
 
+<header>
+<div class="logo">Old Pro Roofing</div>
+</header>
 
-<nav>
-  <div class="l0go-area">
-<a href="https://www.oldproroofing.com" target="_blank" class="logo-link">
-<img src="logo.png" alt="Old Pro Roofing" style="height: 45px;">
-</a>
- 
-    <div class="slogan">
-    Trust your home to an Old Pro
-  </div>
+<section class="hero">
+<h1>ROOFING <span>DONE RIGHT</span></h1>
+<p>Serving Burleson, Crowley, Cleburne, Mansfield, Arlington & Fort Worth</p>
+<p>No pressure. Just honest answers and real solutions.</p>
+<a href="tel:16822720473" class="btn">CALL OR TEXT (682) 272-0473</a>
+</section>
+
+<section class="section">
+<h2>FREE ROOF INSPECTIONS</h2>
+<div class="card">
+We check for hail damage, leaks, and overall roof condition at no cost to you.
 </div>
-    
-  <div class="nav-links">
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#about">The Specialist</a>
-<a href="#contact">Contact</a>
+
+<div class="card">
+Honest, professional assessments — no sales pressure, just real answers.
 </div>
-</nav>
 
+<div class="card">
+Quality roofing work focused on protecting your home long-term.
+</div>
+</section>
 
-<section id="home" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.85)), url('main-roof.jpg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; position: relative;">
-<h1 class="huge-title">ROOFING<br><span class="highlight">DONE RIGHT.</span></h1>
-<p style="font-family: sans-serif; font-size: 1.4rem; max-width: 750px; margin-bottom: 35px; color: #eee; border-left: 6px solid var(--bronze); padding-left: 20px; line-height: 1.6;">
-No pressure, no runaround. Just honest guidance and clear answers so you can make the right decision for your home.
+<section class="section">
+<h2>AREAS WE SERVE</h2>
+<p class="locations">
+Burleson • Crowley • Cleburne • Mansfield • Arlington • Fort Worth
 </p>
-<a href="tel:6822720473" class="btn-action" style="width: fit-content;">Tap to Call Josh</a>
 </section>
 
-
-<style>
-/* Add/Update this in your <style> section to match your colors */
-.services-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 30px;
-margin-top: 2rem;
-}
-
-.service-card {
-background: #1a1a1a; /* Dark background to match your site */
-border: 1px solid #9c712c; /* Bronze border */
-border-radius: 8px;
-overflow: hidden;
-transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-transform: translateY(-5px);
-}
-
-.service-card img {
-width: 100%;
-height: 220px;
-object-fit: cover;
-border-bottom: 2px solid #9c712c;
-}
-
-.service-content {
-padding: 20px;
-color: #ffffff;
-}
-
-.service-content h3 {
-color: #9c712c; /* Bronze Title */
-margin-top: 0;
-text-transform: uppercase;
-letter-spacing: 1px;
-}
-
-.service-content p {
-font-size: 0.95rem;
-line-height: 1.5;
-color: #cccccc;
-}
-</style>
-
-<section id="services" style="background: #0a0a0a; padding: 60px 10%;">
-<h2 style="text-align: center; color: #ffffff; margin-bottom: 40px; font-family: 'Arial Black', sans-serif;">Services</h2>
-
-<div class="services-grid">
-<div class="service-card">
-<img src="assessment.jpg" alt="Roof Assessment">
-<div class="service-content">
-<h3>Detailed Inspections</h3>
-<p>I provide a comprehensive evaluation of your roof's condition, identifying leaks, wear, and structural details to give you a clear picture of your home's health.</p>
+<section class="section">
+<h2>WHY CHOOSE OLD PRO ROOFING</h2>
+<div class="card">
+✔ Local & reliable — we live and work in your area
 </div>
+<div class="card">
+✔ No pressure approach — you get honest answers
 </div>
-
-<div class="service-card">
-<img src="insurance.jpg" alt="Documentation">
-<div class="service-content">
-<h3>Storm Documentation</h3>
-<p>I specialize in providing high-resolution photo evidence and technical damage reports that you can submit to your carrier for an accurate factual record.</p>
-</div>
-</div>
-
-<div class="service-card">
-<img src="replacement.jpg" alt="Roof Replacement">
-<div class="service-content">
-<h3>Full Replacement</h3>
-<p>Expert installation using premium materials. We focus on durability and craftsmanship to ensure your new roof stands up to the Texas elements for years to come.</p>
-</div>
-</div>
+<div class="card">
+✔ Fast response after storms
 </div>
 </section>
 
-
-<section id="about" style="background: #0f0f0f;">
-<div class="about-flex">
-<img src="josh.jpg" alt="Josh Holland" class="about-img">
-<div class="about-text">
-<h2 class="huge-title">THE <span class="highlight">SPECIALIST</span></h2>
-<p style="font-family: sans-serif; line-height: 1.8; color: #ccc; font-size: 1.2rem; margin-bottom: 20px;">
-My name is Josh Holland. I am a specialist that works for <strong>Old Pro Roofing</strong>, and I'm here to provide the technical clarity you need when dealing with roof damage and exterior projects.
-</p>
-<p style="font-family: sans-serif; line-height: 1.8; color: #ccc; font-size: 1.2rem;">
-Based in Burleson, I focus on providing absolute clarity and reliable solutions. You’re not getting a sales pitch—you’re getting a partner dedicated to ensuring your home is built to stand up to Texas weather.
-</p>
+<section class="section">
+<h2>CONTACT</h2>
+<div class="card">
+Call or Text: (682) 272-0473
 </div>
+<div class="card">
+Serving Burleson, TX and surrounding areas
 </div>
 </section>
 
-
-<section id="contact">
-<h2 class="huge-title" style="text-align: center;">DIRECT <span class="highlight">CONTACT</span></h2>
-<div class="contact-box">
-<div class="contact-detail">
-<h4>I Serve</h4>
-<p>Burleson, Crowley & Surrounding Areas</p>
-</div>
-<div class="contact-detail">
-<h4>Call or Text</h4>
-<a href="tel:6822720473">(682) 272-0473</a>
-</div>
-<div class="contact-detail">
-<h4>Direct Email</h4>
-<a href="mailto:j.holland@oldproroofing.com">j.holland@oldproroofing.com</a>
-</div>
-<div class="contact-detail">
-<h4>Office Address</h4>
-<p>140 W Eldred St, Burleson, TX 76028</p>
+<div class="footer">
+© Old Pro Roofing LLC | Burleson TX
 </div>
 
-
-<a href="tel:6822720473" class="btn-action">Speak With Josh</a>
-
-
-<div class="social-row">
-<a href="https://www.facebook.com/profile.php?id=61588429941873" class="social-btn" target="_blank">Facebook</a>
-<a href="https://www.tiktok.com/@oldprojosh" class="social-btn" target="_blank">TikTok</a>
-<a href="https://www.instagram.com/oldprojosh/" class="social-btn" target="_blank">Instagram</a>
+<div class="sticky-call">
+<a href="tel:16822720473">TAP TO CALL NOW</a>
 </div>
-</div>
-</section>
-
-
-<footer style="text-align: center; padding: 60px 20px; opacity: 0.7; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; font-weight: bold;">
-Trust your home to an old pro.
-<br><br>
-&copy; 2026 Old Pro Roofing, LLC | Josh Holland
-</footer>
-
 
 </body>
 </html>

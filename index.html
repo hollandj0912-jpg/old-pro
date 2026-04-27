@@ -3,102 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roof Repair Burleson TX | Old Pro Roofing</title>
+<title>Old Pro Roofing | Burleson TX Roof Repair</title>
 
-<meta name="description" content="Roof repair and free roof inspections in Burleson, Crowley, Cleburne, Mansfield, Arlington and Fort Worth. Honest roofing with no pressure. Call now.">
+<meta name="description" content="Roof repair and inspections in Burleson, Crowley, Cleburne, Mansfield, Arlington and Fort Worth. No pressure. Just honest roofing.">
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 body {
-margin: 0;
-font-family: Arial, sans-serif;
-background: #0e0e0e;
-color: #fff;
+margin:0;
+font-family: 'Montserrat', sans-serif;
+background:#0b0b0b;
+color:white;
 }
 
 header {
-padding: 15px;
-text-align: center;
-border-bottom: 1px solid #333;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+background:#000;
+border-bottom:1px solid #222;
 }
 
-.logo {
-color: #d4a25a;
-font-weight: bold;
-font-size: 18px;
+header img {
+height:40px;
 }
 
 .hero {
-padding: 40px 20px;
-text-align: center;
+background:url('Main roof.jpg') center/cover no-repeat;
+padding:100px 20px;
+text-align:center;
+position:relative;
+}
+
+.hero::after {
+content:'';
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,0.7);
+}
+
+.hero-content {
+position:relative;
+z-index:2;
 }
 
 .hero h1 {
-font-size: 38px;
-margin-bottom: 10px;
+font-family:'Oswald', sans-serif;
+font-size:48px;
+margin:0;
 }
 
-.hero span {
-color: #d4a25a;
+.gold {
+color:#d4a25a;
 }
 
 .hero p {
-font-size: 16px;
-color: #ccc;
+margin-top:10px;
+color:#ccc;
 }
 
 .btn {
-display: inline-block;
-margin-top: 20px;
-padding: 15px 25px;
-background: #d4a25a;
-color: #000;
-text-decoration: none;
-font-weight: bold;
-border-radius: 5px;
+margin-top:20px;
+display:inline-block;
+padding:15px 25px;
+background:#d4a25a;
+color:black;
+text-decoration:none;
+font-weight:bold;
 }
 
 .section {
-padding: 30px 20px;
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
 }
 
 .section h2 {
-text-align: center;
-margin-bottom: 20px;
+font-family:'Oswald', sans-serif;
+text-align:center;
+margin-bottom:30px;
+}
+
+.services {
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
 }
 
 .card {
-background: #1a1a1a;
-padding: 20px;
-margin-bottom: 15px;
-border-radius: 8px;
+background:#111;
+border:1px solid #222;
+}
+
+.card img {
+width:100%;
+}
+
+.card-content {
+padding:15px;
+}
+
+.meet {
+display:flex;
+flex-direction:column;
+gap:20px;
+align-items:center;
+}
+
+.meet img {
+width:200px;
+border-radius:10px;
 }
 
 .locations {
-text-align: center;
-font-weight: bold;
-color: #d4a25a;
+text-align:center;
+color:#d4a25a;
+font-weight:bold;
 }
 
-.footer {
-text-align: center;
-padding: 20px;
-font-size: 14px;
-color: #aaa;
+footer {
+text-align:center;
+padding:30px;
+color:#888;
 }
 
-.sticky-call {
-position: fixed;
-bottom: 0;
-width: 100%;
-background: #d4a25a;
-text-align: center;
-padding: 15px;
+.sticky {
+position:fixed;
+bottom:0;
+width:100%;
+background:#d4a25a;
+text-align:center;
+padding:15px;
 }
 
-.sticky-call a {
-color: #000;
-font-weight: bold;
-text-decoration: none;
+.sticky a {
+color:black;
+text-decoration:none;
+font-weight:bold;
 }
 </style>
 </head>
@@ -106,28 +152,59 @@ text-decoration: none;
 <body>
 
 <header>
-<div class="logo">Old Pro Roofing</div>
+<img src="logo.jpg" alt="Old Pro Roofing">
 </header>
 
 <section class="hero">
-<h1>ROOFING <span>DONE RIGHT</span></h1>
-<p>Serving Burleson, Crowley, Cleburne, Mansfield, Arlington & Fort Worth</p>
-<p>No pressure. Just honest answers and real solutions.</p>
+<div class="hero-content">
+<h1>ROOFING <span class="gold">DONE RIGHT</span></h1>
+<p>Burleson • Crowley • Cleburne • Mansfield • Arlington • Fort Worth</p>
+<p>No pressure. Just honest answers.</p>
 <a href="tel:16822720473" class="btn">CALL OR TEXT (682) 272-0473</a>
+</div>
 </section>
 
 <section class="section">
-<h2>FREE ROOF INSPECTIONS</h2>
+<h2>SERVICES</h2>
+
+<div class="services">
+
 <div class="card">
-We check for hail damage, leaks, and overall roof condition at no cost to you.
+<img src="Assessment.jpg">
+<div class="card-content">
+<h3>Roof Inspections</h3>
+<p>Free inspections to check for hail damage, leaks, and overall roof condition.</p>
+</div>
 </div>
 
 <div class="card">
-Honest, professional assessments — no sales pressure, just real answers.
+<img src="Insurance.jpg">
+<div class="card-content">
+<h3>Storm Damage Expertise</h3>
+<p>We identify real damage and give you clear, honest answers about your roof.</p>
+</div>
 </div>
 
 <div class="card">
-Quality roofing work focused on protecting your home long-term.
+<img src="Replacement.jpg">
+<div class="card-content">
+<h3>Roof Replacement</h3>
+<p>High-quality materials and workmanship built to last in Texas weather.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>MEET THE SPECIALIST</h2>
+
+<div class="meet">
+<img src="Josh.jpg">
+<p>
+I'm Josh Holland with Old Pro Roofing. I focus on honest inspections and real solutions.
+No pressure, no runaround — just helping you make the right decision for your home.
+</p>
 </div>
 </section>
 
@@ -139,33 +216,17 @@ Burleson • Crowley • Cleburne • Mansfield • Arlington • Fort Worth
 </section>
 
 <section class="section">
-<h2>WHY CHOOSE OLD PRO ROOFING</h2>
-<div class="card">
-✔ Local & reliable — we live and work in your area
-</div>
-<div class="card">
-✔ No pressure approach — you get honest answers
-</div>
-<div class="card">
-✔ Fast response after storms
-</div>
+<h2>GET A FREE INSPECTION</h2>
+<p style="text-align:center;">
+Call or text (682) 272-0473 today.
+</p>
 </section>
 
-<section class="section">
-<h2>CONTACT</h2>
-<div class="card">
-Call or Text: (682) 272-0473
-</div>
-<div class="card">
-Serving Burleson, TX and surrounding areas
-</div>
-</section>
+<footer>
+© Old Pro Roofing LLC
+</footer>
 
-<div class="footer">
-© Old Pro Roofing LLC | Burleson TX
-</div>
-
-<div class="sticky-call">
+<div class="sticky">
 <a href="tel:16822720473">TAP TO CALL NOW</a>
 </div>
 

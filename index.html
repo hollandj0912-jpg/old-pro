@@ -3,135 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Old Pro Roofing | Burleson TX Roof Repair</title>
+<title>Old Pro Roofing | Burleson TX</title>
 
-<meta name="description" content="Roof repair and inspections in Burleson, Crowley, Cleburne, Mansfield, Arlington and Fort Worth. No pressure. Just honest roofing.">
-
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+* { box-sizing: border-box; }
+
 body {
 margin:0;
-font-family: 'Montserrat', sans-serif;
-background:#0b0b0b;
+font-family:'Inter', sans-serif;
+background:#0a0a0a;
 color:white;
 }
 
+h1,h2,h3 {
+font-family:'Oswald', sans-serif;
+letter-spacing:1px;
+}
+
+.gold { color:#d4a25a; }
+
+/* HEADER */
 header {
+position:absolute;
+top:0;
+width:100%;
+z-index:10;
 display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 20px;
-background:#000;
-border-bottom:1px solid #222;
+justify-content:center;
+padding:20px;
 }
 
 header img {
-height:40px;
+height:50px;
 }
 
+/* HERO */
 .hero {
-background:url('Main roof.jpg') center/cover no-repeat;
-padding:100px 20px;
-text-align:center;
 position:relative;
+height:100vh;
+background:url('Main-roof.jpg') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 }
 
-.hero::after {
+.hero::before {
 content:'';
 position:absolute;
-top:0;
-left:0;
-right:0;
-bottom:0;
-background:rgba(0,0,0,0.7);
+inset:0;
+background:linear-gradient(to bottom, rgba(0,0,0,.75), rgba(0,0,0,.95));
 }
 
 .hero-content {
 position:relative;
-z-index:2;
+max-width:700px;
+padding:20px;
+}
+
+.hero-logo {
+width:120px;
+margin-bottom:20px;
+opacity:0.95;
 }
 
 .hero h1 {
-font-family:'Oswald', sans-serif;
-font-size:48px;
+font-size:56px;
 margin:0;
 }
 
-.gold {
-color:#d4a25a;
-}
-
 .hero p {
-margin-top:10px;
 color:#ccc;
+margin-top:15px;
+font-size:18px;
 }
 
 .btn {
-margin-top:20px;
 display:inline-block;
-padding:15px 25px;
+margin-top:30px;
+padding:16px 30px;
 background:#d4a25a;
-color:black;
+color:#000;
+font-weight:700;
 text-decoration:none;
-font-weight:bold;
+letter-spacing:1px;
 }
 
+/* SECTIONS */
 .section {
-padding:60px 20px;
-max-width:1100px;
+padding:80px 30px;
+max-width:1200px;
 margin:auto;
 }
 
-.section h2 {
-font-family:'Oswald', sans-serif;
-text-align:center;
-margin-bottom:30px;
-}
-
-.services {
+.split {
 display:grid;
-grid-template-columns:1fr;
-gap:20px;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+margin-bottom:70px;
 }
 
-.card {
-background:#111;
-border:1px solid #222;
-}
-
-.card img {
+.split img {
 width:100%;
+border-radius:6px;
 }
 
-.card-content {
-padding:15px;
-}
-
+/* MEET */
 .meet {
-display:flex;
-flex-direction:column;
-gap:20px;
+display:grid;
+grid-template-columns:300px 1fr;
+gap:40px;
 align-items:center;
 }
 
 .meet img {
-width:200px;
-border-radius:10px;
+width:100%;
+border-radius:8px;
 }
 
+/* LOCATIONS */
 .locations {
 text-align:center;
 color:#d4a25a;
-font-weight:bold;
+font-weight:600;
+font-size:18px;
 }
 
+/* CTA */
+.cta {
+text-align:center;
+}
+
+/* FOOTER */
 footer {
 text-align:center;
 padding:30px;
-color:#888;
+color:#777;
 }
 
+/* STICKY BAR */
 .sticky {
 position:fixed;
 bottom:0;
@@ -143,8 +156,15 @@ padding:15px;
 
 .sticky a {
 color:black;
+font-weight:700;
 text-decoration:none;
-font-weight:bold;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.hero h1 { font-size:38px; }
+.split { grid-template-columns:1fr; }
+.meet { grid-template-columns:1fr; text-align:center; }
 }
 </style>
 </head>
@@ -152,74 +172,76 @@ font-weight:bold;
 <body>
 
 <header>
-<img src="logo.jpg" alt="Old Pro Roofing">
+<img src="logo.jpg" alt="Old Pro Roofing Logo">
 </header>
 
 <section class="hero">
 <div class="hero-content">
+
+<!-- LOGO INSIDE HERO -->
+<img src="logo.jpg" class="hero-logo">
+
 <h1>ROOFING <span class="gold">DONE RIGHT</span></h1>
+
 <p>Burleson • Crowley • Cleburne • Mansfield • Arlington • Fort Worth</p>
 <p>No pressure. Just honest answers.</p>
+
 <a href="tel:16822720473" class="btn">CALL OR TEXT (682) 272-0473</a>
+
 </div>
 </section>
 
 <section class="section">
-<h2>SERVICES</h2>
 
-<div class="services">
-
-<div class="card">
+<div class="split">
 <img src="Assessment.jpg">
-<div class="card-content">
-<h3>Roof Inspections</h3>
-<p>Free inspections to check for hail damage, leaks, and overall roof condition.</p>
+<div>
+<h2>FREE ROOF INSPECTIONS</h2>
+<p>We check for hail damage, leaks, and overall condition — giving you a clear, honest answer about your roof.</p>
 </div>
 </div>
 
-<div class="card">
+<div class="split">
+<div>
+<h2>STORM DAMAGE EXPERTISE</h2>
+<p>We identify real storm damage and explain exactly what’s going on — no confusion, no pressure.</p>
+</div>
 <img src="Insurance.jpg">
-<div class="card-content">
-<h3>Storm Damage Expertise</h3>
-<p>We identify real damage and give you clear, honest answers about your roof.</p>
-</div>
 </div>
 
-<div class="card">
+<div class="split">
 <img src="Replacement.jpg">
-<div class="card-content">
-<h3>Roof Replacement</h3>
-<p>High-quality materials and workmanship built to last in Texas weather.</p>
+<div>
+<h2>ROOF REPLACEMENT</h2>
+<p>High-quality roofing systems built to handle Texas weather and protect your home long-term.</p>
 </div>
 </div>
 
-</div>
 </section>
 
 <section class="section">
-<h2>MEET THE SPECIALIST</h2>
-
 <div class="meet">
 <img src="Josh.jpg">
+<div>
+<h2>MEET JOSH</h2>
 <p>
-I'm Josh Holland with Old Pro Roofing. I focus on honest inspections and real solutions.
-No pressure, no runaround — just helping you make the right decision for your home.
+I'm Josh Holland, owner of Old Pro Roofing. I built this company on doing things the right way — no pressure,
+no gimmicks, just honest inspections and real solutions.
 </p>
+</div>
 </div>
 </section>
 
 <section class="section">
-<h2>AREAS WE SERVE</h2>
+<h2 style="text-align:center;">AREAS WE SERVE</h2>
 <p class="locations">
 Burleson • Crowley • Cleburne • Mansfield • Arlington • Fort Worth
 </p>
 </section>
 
-<section class="section">
+<section class="section cta">
 <h2>GET A FREE INSPECTION</h2>
-<p style="text-align:center;">
-Call or text (682) 272-0473 today.
-</p>
+<a href="tel:16822720473" class="btn">CALL NOW</a>
 </section>
 
 <footer>

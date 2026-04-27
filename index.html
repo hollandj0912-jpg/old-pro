@@ -41,7 +41,7 @@ left:0;
 padding:15px;
 z-index:10;
 }
-header img{height:42px;}
+header img{height:52px;} /* bigger logo */
 
 /* HERO */
 .hero{
@@ -61,20 +61,22 @@ background:linear-gradient(to bottom, rgba(0,0,0,.6), rgba(0,0,0,.95));
 }
 .hero-content{position:relative;max-width:650px;padding:20px;}
 
-/* BIGGER RUGGED IMAGE */
+/* UPDATED HERO IMAGE */
 .hero-img{
-width:240px;
-max-width:85%;
+width:200px;
+max-width:80%;
 margin-bottom:20px;
-border-radius:4px;
-box-shadow:0 12px 30px rgba(0,0,0,0.7);
+border-radius:8px;
+border:3px solid #1f1f1f;
+box-shadow:
+0 10px 25px rgba(0,0,0,0.7),
+0 0 0 2px rgba(212,162,90,0.2);
 }
 
 .hero h1{
 font-size:48px;
 color:#d4a25a;
 margin:10px 0;
-letter-spacing:1px;
 }
 
 .hero h2{
@@ -83,23 +85,6 @@ margin:0;
 }
 
 .hero p{color:#ccc;font-size:15px;}
-
-/* SOCIAL */
-.social-top{
-display:flex;
-justify-content:center;
-gap:10px;
-margin-top:20px;
-flex-wrap:wrap;
-}
-.social-top a{
-padding:10px 16px;
-background:#141414;
-border:1px solid #222;
-border-radius:6px;
-font-size:14px;
-font-weight:600;
-}
 
 /* TRUST */
 .trust{
@@ -112,6 +97,26 @@ gap:10px;
 font-size:13px;
 }
 .trust span{color:#d4a25a;}
+
+/* SOCIAL (MOVED BELOW TRUST) */
+.social-top{
+text-align:center;
+padding:15px;
+}
+.social-top a{
+display:inline-block;
+margin:5px;
+padding:10px 16px;
+background:#1a1a1a;
+border:1px solid #333;
+border-radius:8px;
+font-size:14px;
+color:#fff;
+}
+.social-top a:hover{
+background:#d4a25a;
+color:#000;
+}
 
 /* GRID */
 .grid{display:grid;gap:15px;}
@@ -138,6 +143,13 @@ line-height:1.7;
 margin-top:20px;
 }
 
+/* AREAS */
+.areas{
+text-align:center;
+color:#d4a25a;
+line-height:1.8;
+}
+
 /* CONTACT */
 .contact p{margin:6px 0;font-size:14px;}
 
@@ -154,12 +166,6 @@ padding:14px;
 color:#000;
 font-weight:bold;
 text-decoration:none;
-}
-
-/* DESKTOP */
-@media(min-width:768px){
-.hero h1{font-size:56px;}
-.hero h2{font-size:32px;}
 }
 </style>
 </head>
@@ -179,18 +185,11 @@ text-decoration:none;
 <img src="josh.jpg" class="hero-img">
 
 <h1>BURLESON TX ROOF REPAIR</h1>
-
 <h2>Roofing Done Right — Without the Runaround</h2>
 
 <p>Work directly with Josh Holland, backed by 20+ years of trusted experience with Old Pro Roofing, LLC.</p>
 
 <a href="tel:16822720473" class="btn">Call Now</a>
-
-<div class="social-top">
-<a href="https://www.facebook.com/share/1CYvSMHYJh/?mibextid=wwXIfr" target="_blank">Facebook</a>
-<a href="https://www.instagram.com/oldprojosh" target="_blank">Instagram</a>
-<a href="https://www.tiktok.com/@oldprojosh" target="_blank">TikTok</a>
-</div>
 
 </div>
 </section>
@@ -203,13 +202,20 @@ text-decoration:none;
 <span>✔ No Pressure Inspections</span>
 </div>
 
+<!-- SOCIAL -->
+<div class="social-top">
+<a href="https://www.facebook.com/share/1CYvSMHYJh/?mibextid=wwXIfr" target="_blank">Facebook</a>
+<a href="https://www.instagram.com/oldprojosh" target="_blank">Instagram</a>
+<a href="https://www.tiktok.com/@oldprojosh" target="_blank">TikTok</a>
+</div>
+
 <!-- ABOUT -->
 <section class="section center">
 <h2>A Better Roofing Experience</h2>
 <p>
 Most homeowners don’t know who to trust when it comes to their roof.<br><br>
 That’s why I keep things simple — honest inspections, clear communication, and quality work backed by a company with over 20 years of experience.<br><br>
-— Josh Holland.
+You’re working directly with me — Josh Holland.
 </p>
 </section>
 
@@ -265,6 +271,15 @@ If you're searching for roof repair in Burleson TX, roof inspections in Johnson 
 
 <a href="tel:16822720473" class="btn">Call Now</a>
 <a href="mailto:j.holland@oldproroofing.com" class="btn">Request Inspection</a>
+</section>
+
+<!-- AREAS -->
+<section class="section">
+<h2 class="center">Areas We Serve</h2>
+
+<p class="areas">
+Burleson • Crowley • Cleburne • Joshua • Alvarado • Godley • Benbrook • Fort Worth • Arlington • Mansfield • Waxahachie • Midlothian • Weatherford • Aledo • Azle
+</p>
 </section>
 
 <!-- CONTACT -->

@@ -10,6 +10,9 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 *{box-sizing:border-box;}
 body{margin:0;font-family:'Inter',sans-serif;background:#0b0b0b;color:#fff;}
@@ -39,36 +42,35 @@ left:0;
 padding:12px;
 z-index:10;
 }
-header img{
-height:42px;
-}
+header img{height:42px;}
 
-/* SOCIAL TOP RIGHT */
+/* SOCIAL ICONS */
 .social-header{
 position:absolute;
 top:15px;
 right:15px;
 display:flex;
-gap:8px;
+gap:10px;
 z-index:10;
 }
 
 .social-header a{
-padding:8px 12px;
+width:36px;
+height:36px;
+display:flex;
+align-items:center;
+justify-content:center;
 background:rgba(0,0,0,0.7);
 border:1px solid rgba(255,255,255,0.2);
-border-radius:4px;
-font-size:12px;
-letter-spacing:1px;
-font-weight:600;
+border-radius:6px;
 color:#fff;
-text-decoration:none;
+font-size:16px;
+transition:0.2s;
 }
 
 .social-header a:hover{
 background:#d4a25a;
 color:#000;
-border-color:#d4a25a;
 }
 
 /* HERO */
@@ -143,7 +145,6 @@ font-size:13px;
 .grid{display:grid;gap:15px;}
 @media(min-width:700px){.grid-2{grid-template-columns:1fr 1fr;}}
 
-/* CARD */
 .card{
 background:#141414;
 padding:18px;
@@ -151,7 +152,6 @@ border-radius:8px;
 border:1px solid #222;
 }
 
-/* GALLERY */
 .gallery img{
 width:100%;
 border-radius:8px;
@@ -164,21 +164,18 @@ color:#d4a25a;
 line-height:1.8;
 }
 
-/* CONTACT (FIXED COLORS) */
-.contact p{margin:6px 0;font-size:14px;}
-
-.contact a{
-color:#d4a25a;
-text-decoration:none;
+/* CONTACT FIX */
+.contact a,
+.contact a:link,
+.contact a:visited,
+.contact a:active{
+color:#d4a25a !important;
+text-decoration:none !important;
 font-weight:600;
 }
 
-.contact a:visited{
-color:#d4a25a;
-}
-
 .contact a:hover{
-color:#fff;
+color:#ffffff !important;
 }
 
 /* STICKY */
@@ -206,10 +203,11 @@ text-decoration:none;
 </a>
 </header>
 
+<!-- SOCIAL ICONS -->
 <div class="social-header">
-<a href="https://www.facebook.com/share/1CYvSMHYJh/?mibextid=wwXIfr" target="_blank">FB</a>
-<a href="https://www.instagram.com/oldprojosh" target="_blank">IG</a>
-<a href="https://www.tiktok.com/@oldprojosh" target="_blank">TT</a>
+<a href="https://www.facebook.com/share/1CYvSMHYJh/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/oldprojosh" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.tiktok.com/@oldprojosh" target="_blank"><i class="fab fa-tiktok"></i></a>
 </div>
 
 <!-- HERO -->
@@ -239,18 +237,15 @@ text-decoration:none;
 <!-- ABOUT -->
 <section class="section center">
 <h2>A Better Roofing Experience</h2>
-
 <p>
 “I treat every home like it’s my own — and every customer like family.”<br><br>
 — Josh Holland
 </p>
-
 </section>
 
 <!-- GALLERY -->
 <section class="section">
 <h2 class="center">Real Work. Real Results.</h2>
-
 <div class="grid grid-2 gallery">
 <img src="roof3.jpg">
 <img src="replacement.jpg">
@@ -262,7 +257,6 @@ text-decoration:none;
 <!-- SERVICES -->
 <section class="section">
 <h2 class="center">What I Can Help With</h2>
-
 <div class="grid grid-2">
 <div class="card">Roof Inspections</div>
 <div class="card">Roof Repairs</div>
@@ -274,7 +268,6 @@ text-decoration:none;
 <!-- PROCESS -->
 <section class="section">
 <h2 class="center">Simple. Straightforward. Done Right.</h2>
-
 <div class="grid grid-2">
 <div class="card">1. Inspection — Full evaluation</div>
 <div class="card">2. Explanation — Clear answers</div>
@@ -287,7 +280,6 @@ text-decoration:none;
 <section class="section center">
 <h2>Think Something Might Be Wrong?</h2>
 <p>I’ll take a look and give you honest feedback — no pressure.</p>
-
 <a href="tel:16822720473" class="btn">Call Now</a>
 <a href="mailto:j.holland@oldproroofing.com" class="btn">Request Inspection</a>
 </section>
@@ -295,7 +287,6 @@ text-decoration:none;
 <!-- AREAS -->
 <section class="section">
 <h2 class="center">Areas We Serve</h2>
-
 <p class="areas">
 Burleson • Crowley • Cleburne • Joshua • Alvarado • Godley • Benbrook • Fort Worth • Arlington • Mansfield • Waxahachie • Midlothian • Weatherford • Aledo • Azle
 </p>

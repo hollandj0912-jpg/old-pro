@@ -4,16 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Roof Repair Burleson TX | Roofing Specialist</title>
+<title>Roof Repair Burleson TX | DFW Roofing Specialist</title>
 
-<meta name="description" content="Roof repair, roof inspections, and storm damage roofing in Burleson, Crowley, Cleburne, Mansfield, Arlington, and Fort Worth. Call today for a free inspection.">
+<meta name="description" content="Roof repair, inspections, and storm damage roofing in Burleson TX and across Johnson County, Tarrant County, and DFW. Call today for a free inspection.">
 
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body { margin:0; font-family:'Inter', sans-serif; background:#0a0a0a; color:white; }
+body {
+margin:0;
+font-family:'Inter', sans-serif;
+background:#0b0b0b;
+color:white;
+}
 
-h1,h2,h3 { font-family:'Oswald', sans-serif; letter-spacing:1px; }
+h1,h2,h3 {
+font-family:'Oswald', sans-serif;
+letter-spacing:1px;
+}
 
 .gold { color:#d4a25a; }
 
@@ -32,12 +40,19 @@ position:relative;
 content:'';
 position:absolute;
 inset:0;
-background:rgba(0,0,0,.80);
+background:linear-gradient(to bottom, rgba(0,0,0,.7), rgba(0,0,0,.95));
 }
 
-.hero-content { position:relative; max-width:800px; }
+.hero-content {
+position:relative;
+max-width:850px;
+padding:20px;
+}
 
-.hero img { width:160px; margin-bottom:20px; }
+.hero img {
+width:160px;
+margin-bottom:20px;
+}
 
 .hero h1 {
 font-size:64px;
@@ -53,27 +68,54 @@ font-size:18px;
 .btn {
 display:inline-block;
 margin-top:30px;
-padding:18px 35px;
+padding:18px 40px;
 background:#d4a25a;
 color:black;
 font-weight:700;
 text-decoration:none;
-font-size:18px;
+letter-spacing:1px;
 }
 
 /* SECTION */
 .section {
-padding:80px 25px;
-max-width:1100px;
+padding:90px 25px;
+max-width:1200px;
 margin:auto;
 }
 
+/* SERVICES GRID */
+.grid {
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+gap:25px;
+}
+
+.card {
+background:#141414;
+border:1px solid #222;
+transition:0.3s;
+}
+
+.card:hover {
+transform:translateY(-5px);
+border-color:#d4a25a;
+}
+
+.card img {
+width:100%;
+}
+
+.card-content {
+padding:20px;
+}
+
+/* SPLIT */
 .split {
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:50px;
 align-items:center;
-margin-bottom:70px;
+margin-top:60px;
 }
 
 .split img { width:100%; }
@@ -81,7 +123,7 @@ margin-bottom:70px;
 /* MEET */
 .meet {
 display:grid;
-grid-template-columns:250px 1fr;
+grid-template-columns:280px 1fr;
 gap:40px;
 align-items:center;
 }
@@ -90,19 +132,27 @@ align-items:center;
 .locations {
 text-align:center;
 color:#d4a25a;
-font-weight:bold;
+font-weight:600;
 font-size:18px;
 }
 
-/* SEO BLOCK (THIS IS YOUR “PIZZAS”) */
+/* SEO TEXT */
 .seo {
-line-height:1.8;
 color:#bbb;
-font-size:15px;
+line-height:1.8;
+}
+
+/* CTA */
+.cta {
+text-align:center;
 }
 
 /* FOOTER */
-footer { text-align:center; padding:30px; color:#777; }
+footer {
+text-align:center;
+padding:30px;
+color:#777;
+}
 
 /* STICKY */
 .sticky {
@@ -114,12 +164,17 @@ text-align:center;
 padding:15px;
 }
 
-.sticky a { color:black; font-weight:bold; text-decoration:none; }
+.sticky a {
+color:black;
+font-weight:bold;
+text-decoration:none;
+}
 
+/* MOBILE */
 @media(max-width:768px){
+.hero h1 { font-size:40px; }
 .split { grid-template-columns:1fr; }
 .meet { grid-template-columns:1fr; text-align:center; }
-.hero h1 { font-size:40px; }
 }
 </style>
 </head>
@@ -129,12 +184,12 @@ padding:15px;
 <section class="hero">
 <div class="hero-content">
 
-<img src="logo.png" alt="Old Pro Roofing">
+<img src="logo.png">
 
 <h1>BURLESON TX <span class="gold">ROOF REPAIR</span></h1>
 
-<p>Local Roofing Specialist Serving Johnson & Tarrant County</p>
-<p>Burleson • Crowley • Cleburne • Mansfield • Arlington • Fort Worth</p>
+<p>Local Roofing Specialist Serving Burleson & DFW</p>
+<p>Johnson County • Tarrant County • Full DFW Coverage</p>
 
 <a href="tel:16822720473" class="btn">CALL FOR FREE INSPECTION</a>
 
@@ -143,41 +198,34 @@ padding:15px;
 
 <section class="section">
 
-<h2>ROOF REPAIR & INSPECTIONS IN BURLESON TX</h2>
+<h2 style="text-align:center;">ROOFING SERVICES</h2>
 
-<p>
-As a local roofing specialist with Old Pro Roofing, I provide roof repair, roof inspections,
-and storm damage assessments throughout Burleson, Crowley, Cleburne, Mansfield, Arlington,
-and Fort Worth. My goal is simple — give you a clear, honest understanding of your roof so you
-can make the right decision.
-</p>
+<div class="grid">
 
-</section>
-
-<section class="section">
-
-<div class="split">
+<div class="card">
 <img src="assessment.jpg">
-<div>
-<h2>FREE ROOF INSPECTIONS</h2>
-<p>We inspect for hail damage, leaks, and overall roof condition at no cost.</p>
+<div class="card-content">
+<h3>Roof Inspections</h3>
+<p>Free inspections to identify damage and give you clear answers.</p>
 </div>
 </div>
 
-<div class="split">
-<div>
-<h2>STORM DAMAGE ROOFING</h2>
-<p>Accurate damage identification and straightforward answers — no pressure.</p>
-</div>
+<div class="card">
 <img src="insurance.jpg">
+<div class="card-content">
+<h3>Storm Damage</h3>
+<p>We assess hail and wind damage with accuracy and honesty.</p>
+</div>
 </div>
 
-<div class="split">
+<div class="card">
 <img src="replacement.jpg">
-<div>
-<h2>ROOF REPLACEMENT</h2>
-<p>Durable, high-quality roofing systems built for Texas weather.</p>
+<div class="card-content">
+<h3>Roof Replacement</h3>
+<p>High-quality roofing systems built to last in Texas weather.</p>
 </div>
+</div>
+
 </div>
 
 </section>
@@ -189,7 +237,7 @@ can make the right decision.
 <h2>MEET YOUR ROOFING SPECIALIST</h2>
 <p>
 I'm Josh Holland, a roofing specialist with Old Pro Roofing. I focus on honest inspections,
-clear communication, and helping homeowners understand exactly what’s going on with their roof.
+clear communication, and helping homeowners make the right decision without pressure.
 </p>
 </div>
 </div>
@@ -198,30 +246,27 @@ clear communication, and helping homeowners understand exactly what’s going on
 <section class="section">
 <h2 style="text-align:center;">AREAS WE SERVE</h2>
 <p class="locations">
-Burleson • Crowley • Cleburne • Mansfield • Arlington • Fort Worth
+Burleson • Crowley • Cleburne • Mansfield • Arlington • Fort Worth • Johnson County • Tarrant County • DFW
 </p>
 </section>
 
-<!-- 🔥 SEO CONTENT (THIS IS WHAT HELPS YOU RANK) -->
 <section class="section">
-<h2>BURLESON TX ROOFING SERVICES</h2>
+<h2>BURLESON TX ROOFING COMPANY</h2>
 <p class="seo">
-If you're searching for roof repair in Burleson TX, roof inspections in Crowley, or storm damage roofing
-in Cleburne, Mansfield, Arlington, or Fort Worth, Old Pro Roofing provides reliable service across the area.
-We help homeowners identify roof damage, understand their options, and move forward with confidence.
-Whether your roof has been impacted by hail, wind, or general wear and tear, getting a professional roof
-inspection is the first step. We work throughout Johnson County and Tarrant County providing roofing
-solutions that are built to last.
+If you're searching for roof repair in Burleson TX or roofing services anywhere in Johnson County,
+Tarrant County, or the greater Dallas-Fort Worth area, Old Pro Roofing provides professional inspections,
+storm damage assessments, and roof replacement services. Whether your roof has been impacted by hail,
+wind, or aging, getting a proper inspection is the first step to protecting your home.
 </p>
 </section>
 
-<section class="section" style="text-align:center;">
-<h2>CALL NOW FOR A FREE ROOF INSPECTION</h2>
+<section class="section cta">
+<h2>CALL NOW FOR A FREE INSPECTION</h2>
 <a href="tel:16822720473" class="btn">CALL (682) 272-0473</a>
 </section>
 
 <footer>
-Old Pro Roofing | Roofing Specialist Serving Burleson TX & Surrounding Areas
+Roofing Specialist | Old Pro Roofing | Burleson TX & DFW
 </footer>
 
 <div class="sticky">

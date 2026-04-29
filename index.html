@@ -348,12 +348,21 @@ button {
 }
 
 .glow-text {
-  color: #e6c27a;
+  color: #e6c27a; !important;
   text-shadow:
-    0 0 4px rgba(230, 194, 122, 0.6),
-    0 0 8px rgba(230, 194, 122, 0.4),
-    0 0 12px rgba(230, 194, 122, 0.25);
+    0 0 6px rgba(230, 194, 122, 0.8),
+    0 0 12px rgba(230, 194, 122, 0.6),
+    0 0 18px rgba(230, 194, 122, 0.4) !important;
 }
+
+@media (max-width: 768px) {
+  .glow-text {
+    color: #e6c27a !important;
+    text-shadow:
+      0 0 6px rgba(230, 194, 122, 0.8),
+      0 0 12px rgba(230, 194, 122, 0.6),
+      0 0 18px rgba(230, 194, 122, 0.4) !important;
+  }
 
 
 </style> 
@@ -415,10 +424,10 @@ button {
 
 <!-- TRUST -->
 <div class="trust">
-<span ✔class="glow-text">Backed By Old Pro's 20+ Years Of Experience</span>
-<span ✔class="glow-text">Fully Insured</span>
-<span ✔class="glow-text"> & Trusted</span>
-<span ✔class="glow-text"> Inspections</span>
+<span class="glow-text">✔Backed By Old Pro's 20+ Years Of Experience</span>
+<span class="glow-text">✔Fully Insured</span>
+<span class="glow-text">✔& Trusted</span>
+<span class="glow-text">✔Free Inspections</span>
 </div>
 
 

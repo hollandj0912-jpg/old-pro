@@ -256,42 +256,43 @@ margin:0;
   font-weight: 500;
 }
 
-/* DESKTOP OPTIMIZATION */
+
+/* =========================
+   DESKTOP FIX (FORCE SCALE)
+========================= */
 @media (min-width: 768px) {
 
-  .hero {
-    padding: 120px 20px;
-  }
-
-  .hero-img {
-    width: 180px;
-    height: 180px;
-  }
-
   .name-script {
-    font-size: 72px; /* bigger name */
+    font-size: 72px !important;
   }
 
-  h2 {
-    font-size: 20px;
+  .specialist-row h2 {
+    font-size: 18px !important;
     letter-spacing: 3px;
   }
 
   .tagline {
-    font-size: 22px;
+    font-size: 22px !important;
   }
 
   .btn {
-    max-width: 360px;
-    font-size: 18px;
-    padding: 16px;
+    font-size: 18px !important;
+    padding: 16px 20px !important;
+    max-width: 360px !important;
   }
 
-  .section {
-    max-width: 1200px;
-    margin: auto;
+  .hero-img {
+    width: 180px !important;
+    height: 180px !important;
   }
 
+  .hero {
+    padding: 140px 20px !important;
+  }
+
+  .brand-exact {
+    margin-top: 40px !important;
+  }
 
 
 </style> 

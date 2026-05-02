@@ -3,89 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Roof Inspection | Old Pro Roofing</title>
+<title>Roof Inspection | Old Pro Roofing</title>
 
 <style>
 :root{
-  --bg:#000;
-  --card:#111;
-  --text:#fff;
-  --muted:#bbb;
+  --black:#000;
+  --dark:#111;
   --bronze:#cd7f32;
   --bronze2:#b87333;
-  --border:#2a2a2a;
+  --white:#fff;
+  --gray:#bbb;
 }
 
-*{box-sizing:border-box}
 body{
   margin:0;
-  font-family: Arial, Helvetica, sans-serif;
-  background:var(--bg);
-  color:var(--text);
+  font-family: Arial, sans-serif;
+  background:var(--black);
+  color:var(--white);
 }
 
-/* LAYOUT */
-.wrap{
-  max-width:640px;
-  margin:0 auto;
-  padding:16px;
-}
-.card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:10px;
-  padding:16px;
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
 }
 
 /* HEADER */
 .header{
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  gap:10px;
+  align-items:center;
+  margin-bottom:20px;
 }
-.logo{ height:48px; object-fit:contain; }
+
+.logo{ height:55px; }
+
 .badge{
   background:var(--bronze);
   color:#000;
-  font-weight:700;
-  font-size:12px;
-  padding:6px 10px;
-  border-radius:6px;
+  padding:6px 12px;
+  font-weight:bold;
+  border-radius:5px;
 }
 
-/* HERO */
-.hero{ text-align:center; padding:10px 0 6px; }
-h1{
-  font-size:30px;
-  line-height:1.15;
-  margin:10px 0 8px;
-}
-.sub{
-  color:var(--muted);
-  font-size:16px;
-  margin-bottom:8px;
-}
-.highlight{ color:var(--bronze); font-weight:700; }
-
-.timer{
-  font-size:13px;
-  color:#ff5c5c;
-  margin:6px 0 10px;
+/* HERO GRID */
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
 }
 
-/* TRUST BAR */
-.trust{
-  display:flex;
-  justify-content:space-between;
-  gap:6px;
-  font-size:12px;
-  color:#aaa;
-  margin:8px 0 10px;
+.hero h1{
+  font-size:42px;
+  line-height:1.1;
 }
 
-/* FORM */
-.form input{
+.hero p{
+  color:var(--gray);
+  font-size:18px;
+}
+
+/* FORM CARD */
+.form-box{
+  background:var(--dark);
+  padding:25px;
+  border-radius:10px;
+  border:1px solid #333;
+}
+
+.form-box h3{
+  margin-bottom:10px;
+}
+
+input{
   width:100%;
   padding:14px;
   margin-top:10px;
@@ -93,156 +85,164 @@ h1{
   border:none;
   font-size:16px;
 }
-.cta{
+
+button{
   width:100%;
   padding:16px;
   margin-top:12px;
+  background:linear-gradient(135deg,var(--bronze),var(--bronze2));
   border:none;
   border-radius:8px;
-  font-weight:800;
   font-size:18px;
+  font-weight:bold;
   color:#000;
-  background:linear-gradient(135deg,var(--bronze),var(--bronze2));
   cursor:pointer;
 }
 
-/* QUICK ACTIONS */
-.quick a{
+/* ACTION BUTTONS */
+.actions a{
   display:block;
   margin-top:8px;
   padding:12px;
   text-align:center;
-  border-radius:8px;
+  border-radius:6px;
   text-decoration:none;
-  font-weight:700;
+  font-weight:bold;
 }
-.call{ background:#1f1f1f; color:#fff; }
-.text{ background:#2a2a2a; color:#fff; }
 
-/* IMAGE */
-.hero-img{
-  width:100%;
+.call{ background:#222; color:#fff; }
+.text{ background:#333; color:#fff; }
+
+/* PROOF BAR */
+.proof{
+  background:#1a1a1a;
+  padding:15px;
+  margin-top:25px;
   border-radius:8px;
-  margin-top:12px;
+  text-align:center;
 }
 
 /* SECTIONS */
-.section{ margin-top:22px; }
+.section{
+  margin-top:40px;
+}
+
 .section h2{
   color:var(--bronze);
-  margin-bottom:6px;
 }
-.section p{ color:var(--muted); }
 
-.proof{
-  background:#1a1a1a;
-  padding:12px;
-  border-radius:8px;
-  margin-top:14px;
-  font-size:14px;
+.section p{
+  color:var(--gray);
 }
 
 /* STICKY BAR */
 .sticky{
   position:fixed;
   bottom:0;
-  left:0;
   width:100%;
   background:#000;
-  border-top:1px solid var(--border);
+  border-top:1px solid #333;
   padding:10px;
 }
+
 .sticky a{
   display:block;
-  max-width:640px;
+  max-width:600px;
   margin:auto;
   text-align:center;
-  padding:14px;
-  border-radius:8px;
-  font-weight:800;
-  text-decoration:none;
-  color:#000;
   background:var(--bronze);
+  color:#000;
+  padding:14px;
+  border-radius:6px;
+  font-weight:bold;
+  text-decoration:none;
 }
 
-/* SMALL */
-.small{ font-size:12px; color:#888; margin-top:8px; text-align:center; }
+/* MOBILE */
+@media(max-width:800px){
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:28px;
+    text-align:center;
+  }
+
+  .hero p{
+    text-align:center;
+  }
+}
 </style>
 </head>
 
 <body>
 
-<div class="wrap">
-  <div class="card">
+<div class="container">
 
-    <!-- HEADER -->
-    <div class="header">
-      <img src="logo.png" class="logo" alt="Old Pro Roofing">
-      <div class="badge">DFW Storm Response</div>
-    </div>
+<!-- HEADER -->
+<div class="header">
+  <img src="logo.png" class="logo">
+  <div class="badge">Your Trusted Roof Team</div>
+</div>
 
-    <!-- HERO -->
-    <div class="hero">
-      <h1>Your Roof Was Hit.<br>You Just Can’t See It Yet.</h1>
-      <div class="sub">
-        Homeowners in <span class="highlight">Fort Worth, Cleburne & Godley</span> are getting roofs approved right now.
-      </div>
-      <div class="timer">⏳ Limited inspection slots today</div>
+<!-- HERO -->
+<div class="hero">
 
-      <div class="trust">
-        <span>✔ Fully Insured</span>
-        <span>✔ Local & Trusted</span>
-        <span>✔ 20+ Year's of Experience</span>
-      </div>
+<div>
+<h1>Your Roof Was Hit.<br>You Just Can’t See It Yet.</h1>
 
-      <!-- OPTIONAL HERO IMAGE -->
-      <img src="roof2.jpg" class="hero-img" alt="Roof inspection">
+<p>Homeowners across Fort Worth & surrounding areas are getting roofs approved right now — most had no idea there was damage.</p>
 
-      <!-- FORM -->
-      <!-- Replace action URL with your GHL form webhook or embed endpoint -->
-      <form class="form" action="https://YOUR-WEBHOOK-OR-FORM-URL" method="POST">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="tel" name="phone" placeholder="Phone Number" required>
-        <input type="text" name="address" placeholder="Home Address" required>
-        <button type="submit" class="cta">Check My Roof Now (Free)</button>
-      </form>
+<p><strong>Free inspection. No pressure. Just answers.</strong></p>
+</div>
 
-      <!-- QUICK ACTIONS -->
-      <div class="quick">
-        <a href="tel:6822720473" class="call">📞 Call Now</a>
-        <a href="sms:6822720473" class="text">💬 Text Me</a>
-      </div>
+<!-- FORM -->
+<div class="form-box">
+<h3>Check If Your Roof Qualifies</h3>
 
-      <div class="small">No obligation • Takes 10–15 minutes</div>
-    </div>
+<form action="#">
+<input type="text" placeholder="Full Name" required>
+<input type="tel" placeholder="Phone Number" required>
+<input type="text" placeholder="Home Address" required>
 
-    <!-- PROOF -->
-    <div class="proof">
-      🔥 3 homeowners nearby were approved this week after a quick inspection.
-    </div>
+<button>Check My Roof Now (Free)</button>
+</form>
 
-    <!-- SECTIONS -->
-    <div class="section">
-      <h2>You May Already Qualify</h2>
-      <p>Most roofs we inspect look fine — but have hidden hail damage insurance covers.</p>
-    </div>
+<div class="actions">
+<a href="tel:6822720473" class="call">📞 Call Now</a>
+<a href="sms:6822720473" class="text">💬 Text Me</a>
+</div>
+</div>
 
-    <div class="section">
-      <h2>This Isn’t a Sales Pitch</h2>
-      <p>I inspect your roof, show you photos, and tell you the truth. No pressure.</p>
-    </div>
+</div>
 
-    <div class="section">
-      <h2>Work Directly With Me</h2>
-      <p>I’m Josh. I handle everything from inspection to completion, backed by Old Pro Roofing.</p>
-    </div>
+<!-- PROOF -->
+<div class="proof">
+🔥 Multiple homeowners in your area were approved this week after a quick inspection.
+</div>
 
-  </div>
+<!-- SECTIONS -->
+<div class="section">
+<h2>You May Already Qualify</h2>
+<p>Even if your roof looks fine, storm damage is often hidden — and insurance may cover it.</p>
+</div>
+
+<div class="section">
+<h2>This Isn’t a Sales Appointment</h2>
+<p>I inspect your roof, show you photos, and tell you exactly what’s going on.</p>
+</div>
+
+<div class="section">
+<h2>Work Directly With Me</h2>
+<p>I’m Josh. I handle everything start to finish, backed by Old Pro Roofing.</p>
+</div>
+
 </div>
 
 <!-- STICKY CTA -->
 <div class="sticky">
-  <a href="tel:6822720473">📞 Call / Text Josh Now</a>
+<a href="tel:6822720473">📞 Call / Text Josh Now</a>
 </div>
 
 </body>

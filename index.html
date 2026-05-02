@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- PREMIUM TYPOGRAPHY -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
 
 <title>Free Roof Inspection | Old Pro Roofing</title>
@@ -23,9 +22,8 @@ body{
   margin:0;
   padding-bottom:90px;
   font-family:'Inter', Arial, sans-serif;
-  background:var(--black);
-  color:var(--white);
-  -webkit-font-smoothing:antialiased;
+  background:#000;
+  color:#fff;
 }
 
 .container{
@@ -53,16 +51,11 @@ body{
 .socials a{
   width:38px;
   height:38px;
-  background:var(--bronze);
+  background:#cd7f32;
   display:flex;
   align-items:center;
   justify-content:center;
   border-radius:6px;
-  transition:0.2s;
-}
-
-.socials a:hover{
-  background:var(--bronze2);
 }
 
 .socials svg{
@@ -81,20 +74,17 @@ body{
 
 h1,h2,h3{
   font-family:'Oswald', sans-serif;
-  letter-spacing:0.5px;
 }
 
 .hero h1{
   font-size:46px;
   line-height:1.05;
-  font-weight:600;
   text-shadow:0 0 10px rgba(205,127,50,0.25);
 }
 
 .hero p{
-  color:var(--gray);
+  color:#bbb;
   font-size:18px;
-  line-height:1.6;
 }
 
 /* TRUST */
@@ -110,7 +100,6 @@ h1,h2,h3{
   padding:6px 10px;
   border-radius:6px;
   font-size:13px;
-  font-weight:500;
 }
 
 /* IMAGE */
@@ -122,14 +111,10 @@ h1,h2,h3{
 
 /* FORM */
 .form-box{
-  background:var(--dark);
+  background:#111;
   padding:25px;
   border-radius:10px;
   border:1px solid #333;
-}
-
-.form-box h3{
-  font-size:22px;
 }
 
 input{
@@ -139,23 +124,21 @@ input{
   border-radius:6px;
   border:none;
   font-size:16px;
-  font-family:inherit;
 }
 
 button{
   width:100%;
   padding:16px;
   margin-top:12px;
-  background:linear-gradient(135deg,var(--bronze),var(--bronze2));
+  background:linear-gradient(135deg,#cd7f32,#b87333);
   border:none;
   border-radius:8px;
   font-size:18px;
   font-weight:600;
   color:#000;
-  cursor:pointer;
 }
 
-/* ACTION BUTTONS */
+/* ACTIONS */
 .actions a{
   display:block;
   margin-top:8px;
@@ -163,7 +146,6 @@ button{
   text-align:center;
   border-radius:6px;
   text-decoration:none;
-  font-weight:500;
 }
 
 .call{ background:#222; color:#fff; }
@@ -176,7 +158,6 @@ button{
   margin-top:25px;
   border-radius:8px;
   text-align:center;
-  font-weight:500;
 }
 
 /* SECTIONS */
@@ -185,14 +166,11 @@ button{
 }
 
 .section h2{
-  color:var(--bronze);
-  font-size:26px;
+  color:#cd7f32;
 }
 
 .section p{
-  color:var(--gray);
-  font-size:18px;
-  line-height:1.6;
+  color:#bbb;
 }
 
 /* ABOUT */
@@ -202,6 +180,13 @@ button{
   border-radius:10px;
   border:1px solid #222;
   margin-top:40px;
+}
+
+/* ABOUT IMAGE */
+.about-img{
+  width:100px;
+  border-radius:10px;
+  margin-bottom:10px;
 }
 
 /* STICKY */
@@ -232,7 +217,7 @@ button{
 }
 
 .sticky-call{
-  background:var(--bronze);
+  background:#cd7f32;
   color:#000;
 }
 
@@ -271,7 +256,6 @@ button{
 </a>
 
 <div class="socials">
-
 <a href="https://www.facebook.com/profile.php?id=61588429941873" target="_blank">
 <svg viewBox="0 0 24 24"><path d="M13 22v-8h3l1-4h-4V7c0-1 0-2 2-2h2V1h-3c-4 0-5 2-5 5v4H6v4h3v8z"/></svg>
 </a>
@@ -283,7 +267,6 @@ button{
 <a href="https://www.tiktok.com/@oldprojosh" target="_blank">
 <svg viewBox="0 0 24 24"><path d="M16 1v4c1 1 3 2 5 2v4c-2 0-4-1-5-2v7a6 6 0 11-6-6h1v4h-1a2 2 0 102 2V1h4z"/></svg>
 </a>
-
 </div>
 
 </div>
@@ -294,14 +277,15 @@ button{
 <div>
 <h1>Your Roof Was Hit.<br>You Just Can’t See It Yet.</h1>
 
+<p>Homeowners across Fort Worth & surrounding areas are getting roofs approved right now.</p>
+
+<p><strong>Free inspection. No pressure. Just answers.</strong></p>
+
+<!-- MOVED TRUST HERE -->
 <div class="trust-badges">
 <div>⭐ 5.0 Google Rating (231 Reviews)</div>
 <div>A+ BBB Rated</div>
 </div>
-
-<p>Homeowners across Fort Worth & surrounding areas are getting roofs approved right now.</p>
-
-<p><strong>Free inspection. No pressure. Just answers.</strong></p>
 
 <img src="roof3.jpg" class="hero-img" onerror="this.style.display='none'">
 </div>
@@ -319,14 +303,14 @@ button{
 
 <div class="actions">
 <a href="tel:6822720473" class="call">📞 Call Now</a>
-<a href="sms:6822720473?body=Hey Josh, I saw your site and wanted to ask about a roof inspection" class="text">💬 Text Me</a>
+<a href="sms:6822720473" class="text">💬 Text Me</a>
 </div>
 </div>
 
 </div>
 
 <div class="proof">
-🔥 231+ homeowners have trusted Old Pro Roofing — many started with a quick inspection like this.
+🔥 231+ homeowners have trusted Old Pro Roofing — Backed By Experience. Built On Trust.
 </div>
 
 <div class="section">
@@ -341,8 +325,12 @@ button{
 <p>Backed by Old Pro Roofing and its 20+ years of experience.</p>
 </div>
 
+<!-- ABOUT -->
 <div class="about">
 <h2>About</h2>
+
+<img src="josh.jpg" class="about-img" onerror="this.style.display='none'">
+
 <p>I’m a roofing specialist working with Old Pro Roofing, helping homeowners across DFW after storms.</p>
 <p>If everything looks good, I’ll tell you. If there’s damage, I’ll walk you through what to do next.</p>
 </div>
@@ -353,7 +341,7 @@ button{
 <div class="sticky">
   <div class="sticky-buttons">
     <a href="tel:6822720473" class="sticky-call">📞 Call Now</a>
-    <a href="sms:6822720473?body=Hey Josh, I saw your site and wanted to ask about a roof inspection" class="sticky-text">💬 Text Me</a>
+    <a href="sms:6822720473" class="sticky-text">💬 Text Me</a>
   </div>
 </div>
 

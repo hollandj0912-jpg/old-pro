@@ -48,28 +48,20 @@ body{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:40px;
-  align-items:start;
 }
 
 h1,h2,h3{
   font-family:'Oswald', sans-serif;
 }
 
-.hero h1{
-  font-size:46px;
-  line-height:1.05;
-}
-
-.hero p{
-  color:var(--gray);
-}
+.hero h1{font-size:46px;}
+.hero p{color:var(--gray);}
 
 /* URGENCY */
 .urgency{
   margin-top:10px;
-  font-size:14px;
   color:var(--bronze);
-  font-weight:500;
+  font-size:14px;
 }
 
 /* TRUST */
@@ -98,11 +90,10 @@ h1,h2,h3{
 .mobile-cta{
   display:none;
   margin-top:15px;
-  text-align:center;
   padding:14px;
   background:linear-gradient(135deg,var(--bronze),var(--bronze2));
+  text-align:center;
   color:#000;
-  font-weight:600;
   border-radius:8px;
   text-decoration:none;
 }
@@ -120,13 +111,12 @@ h1,h2,h3{
   padding:14px;
   border-radius:10px;
   border:1px solid #333;
-  font-size:14px;
 }
 
 /* FORM */
 .form-box{
   background:#111;
-  padding:18px 16px;
+  padding:18px;
   border-radius:12px;
   border:1px solid #333;
 }
@@ -134,7 +124,6 @@ h1,h2,h3{
 .form-sub{
   font-size:13px;
   color:#bbb;
-  margin-top:6px;
 }
 
 input{
@@ -153,35 +142,28 @@ button{
   background:linear-gradient(135deg,var(--bronze),var(--bronze2));
   border:none;
   border-radius:6px;
-  font-weight:600;
-  color:#000;
 }
 
-/* RESPONSE LINE */
+/* RESPONSE */
 .response-time{
+  text-align:center;
   font-size:12px;
   color:#888;
   margin-top:8px;
-  text-align:center;
 }
 
-/* PROOF UNDER FORM */
+/* PROOF LINE */
 .post-form-proof{
-  margin-top:10px;
+  text-align:center;
   font-size:13px;
   color:#aaa;
-  text-align:center;
 }
 
 /* EXTRA IMAGE */
-.desktop-extra-img{
-  margin-top:15px;
-}
-
 .desktop-extra-img img{
   width:100%;
   border-radius:10px;
-  border:1px solid #333;
+  margin-top:10px;
 }
 
 /* MOBILE REVIEW */
@@ -190,25 +172,61 @@ button{
   background:#1a1a1a;
   padding:12px;
   border-radius:8px;
-  border:1px solid #333;
-  margin-top:15px;
-  font-size:14px;
+  margin-top:10px;
 }
+
+/* SECTIONS */
+.section{
+  margin-top:40px;
+}
+
+.section h2{color:var(--bronze);}
+
+.about{
+  background:#0d0d0d;
+  padding:20px;
+  border-radius:10px;
+  margin-top:40px;
+}
+
+.about-img{
+  width:100px;
+  border-radius:10px;
+}
+
+/* STICKY */
+.sticky{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background:#000;
+  border-top:1px solid #333;
+  padding:10px;
+}
+
+.sticky-buttons{
+  display:flex;
+  gap:10px;
+  max-width:600px;
+  margin:auto;
+}
+
+.sticky-buttons a{
+  flex:1;
+  text-align:center;
+  padding:14px;
+  border-radius:6px;
+  text-decoration:none;
+}
+
+.sticky-call{background:var(--bronze); color:#000;}
+.sticky-text{background:#333; color:#fff;}
 
 /* MOBILE */
 @media(max-width:800px){
   .hero{grid-template-columns:1fr;}
-
-  .hero h1{
-    font-size:30px;
-    text-align:center;
-  }
-
-  .hero p{text-align:center;}
-
   .mobile-cta{display:block;}
   .mobile-review{display:block;}
-
   .review-card{display:none;}
   .desktop-extra-img{display:none;}
 }
@@ -219,74 +237,54 @@ button{
 
 <div class="container">
 
+<div class="header">
+<img src="logo.png" class="logo">
+</div>
+
 <div class="hero">
 
 <!-- LEFT -->
 <div>
-
-<h1>
-Storm Damage Just Hit Your Area.<br>
-Most Roofs Qualify for Replacement — Check Yours Free.
-</h1>
+<h1>Storm Damage Just Hit Your Area.<br>Most Roofs Qualify — Check Yours Free.</h1>
 
 <p>Free inspection. No pressure. Just answers.</p>
 
-<div class="urgency">
-⚡ Inspections filling up fast — limited slots available
-</div>
+<div class="urgency">⚡ Inspections filling up fast — limited slots available</div>
 
 <div class="trust-badges">
 <div>⭐ 5.0 Google Rating (231 Reviews)</div>
 <div>A+ BBB Rated</div>
-<div>🏠 9 out of 10 roofs we inspect qualify for replacement</div>
+<div>🏠 9 out of 10 roofs qualify</div>
 </div>
 
 <a href="#roof-form" class="mobile-cta">Check My Roof</a>
 
 <img src="roof2.jpg" class="hero-img">
 
-<div class="mobile-review">
-⭐⭐⭐⭐⭐ “Handled everything quickly and professionally… smooth and painless.”
-</div>
-
+<div class="mobile-review">⭐⭐⭐⭐⭐ Smooth and painless experience</div>
 </div>
 
 <!-- RIGHT -->
 <div class="right-stack">
 
-<div class="review-card">
-⭐⭐⭐⭐⭐ “They showed up on time and did a phenomenal job… smooth and painless.”
-</div>
-
-<div class="review-card">
-⭐⭐⭐⭐⭐ “They helped with my claim which made everything less stressful.”
-</div>
+<div class="review-card">⭐⭐⭐⭐⭐ Smooth and painless</div>
+<div class="review-card">⭐⭐⭐⭐⭐ Helped with insurance</div>
 
 <div class="form-box" id="roof-form">
-
 <h3>Check If Your Roof Qualifies</h3>
-
-<p class="form-sub">
-We’ll come out, get on your roof, and tell you exactly what we find.
-</p>
+<p class="form-sub">We’ll come out, get on your roof, and tell you exactly what we find.</p>
 
 <form>
-<input type="text" placeholder="Full Name" required>
-<input type="tel" placeholder="Phone Number" required>
-<input type="text" placeholder="Home Address" required>
-
+<input placeholder="Full Name">
+<input placeholder="Phone">
+<input placeholder="Address">
 <button>Check My Roof Now</button>
-
-<div class="response-time">
-📞 We typically respond within the hour
-</div>
-
+<div class="response-time">📞 We respond within the hour</div>
 </form>
-
 </div>
 
 <div class="post-form-proof">
-231+ roofs replaced across DFW — most homeowners are surprised by what their insurance actually covers.
+231+ roofs replaced — most homeowners are surprised by insurance coverage
 </div>
 
 <div class="desktop-extra-img">
@@ -297,6 +295,27 @@ We’ll come out, get on your roof, and tell you exactly what we find.
 
 </div>
 
+<!-- PROOF -->
+<div class="section">
+<h2>Recent Roof We Helped Replace</h2>
+<img src="before-after.jpg" class="hero-img">
+</div>
+
+<!-- ABOUT -->
+<div class="about">
+<h2>About</h2>
+<img src="Josh.jpg" class="about-img">
+<p>I help homeowners across DFW after storms. If everything looks good, I’ll tell you. If not, I’ll walk you through next steps.</p>
+</div>
+
+</div>
+
+<!-- STICKY -->
+<div class="sticky">
+<div class="sticky-buttons">
+<a href="tel:6822720473" class="sticky-call">Call</a>
+<a href="sms:6822720473" class="sticky-text">Text</a>
+</div>
 </div>
 
 </body>

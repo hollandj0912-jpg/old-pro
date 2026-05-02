@@ -15,7 +15,6 @@
   --gray:#bbb;
 }
 
-/* FIX CUT OFF */
 body{
   margin:0;
   padding-bottom:80px;
@@ -24,7 +23,6 @@ body{
   color:var(--white);
 }
 
-/* CONTAINER */
 .container{
   max-width:1100px;
   margin:auto;
@@ -49,7 +47,7 @@ body{
   border-radius:5px;
 }
 
-/* HERO GRID */
+/* HERO */
 .hero{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -67,6 +65,21 @@ body{
   font-size:18px;
 }
 
+/* TRUST BADGES */
+.trust-badges{
+  margin-top:12px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.trust-badges div{
+  background:#1a1a1a;
+  padding:6px 10px;
+  border-radius:6px;
+  font-size:13px;
+}
+
 /* IMAGE */
 .hero-img{
   width:100%;
@@ -74,7 +87,7 @@ body{
   margin-top:15px;
 }
 
-/* FORM CARD */
+/* FORM */
 .form-box{
   background:var(--dark);
   padding:25px;
@@ -140,7 +153,7 @@ button{
   color:var(--gray);
 }
 
-/* STICKY CTA */
+/* STICKY */
 .sticky{
   position:fixed;
   bottom:0;
@@ -163,7 +176,6 @@ button{
   text-decoration:none;
 }
 
-/* DESKTOP CLEANER STICKY */
 @media(min-width:800px){
   .sticky{
     max-width:400px;
@@ -173,7 +185,6 @@ button{
   }
 }
 
-/* MOBILE */
 @media(max-width:800px){
   .hero{
     grid-template-columns:1fr;
@@ -207,11 +218,18 @@ button{
 <div>
 <h1>Your Roof Was Hit.<br>You Just Can’t See It Yet.</h1>
 
+<!-- TRUST -->
+<div class="trust-badges">
+  <div>⭐ 5.0 Google Rating (231 Reviews)</div>
+  <div>A+ BBB Rated</div>
+</div>
+
 <p>Homeowners across Fort Worth & surrounding areas are getting roofs approved right now — most had no idea there was damage.</p>
 
 <p><strong>Free inspection. No pressure. Just answers.</strong></p>
 
-<img src="roof-damage.jpg" class="hero-img">
+<!-- IMAGE -->
+<img src="roof3.jpg" class="hero-img" alt="Roof damage" onerror="this.style.display='none'">
 </div>
 
 <!-- FORM -->
@@ -236,16 +254,16 @@ button{
 
 <!-- PROOF -->
 <div class="proof">
-🔥 Multiple homeowners in your area were approved this week after a quick inspection.
+🔥 231+ homeowners have trusted Old Pro Roofing — many started with a quick inspection like this.
 </div>
 
 <!-- BEFORE AFTER -->
 <div class="section">
 <h2>Recent Roof We Helped Replace</h2>
 
-<img src="before-after.jpg" class="hero-img">
+<img src="before-after.jpg" class="hero-img" onerror="this.style.display='none'">
 
-<p>Started with a quick inspection… ended with a full replacement approved.</p>
+<p>Started with a free inspection… ended with a full replacement approved.</p>
 </div>
 
 <!-- PROCESS -->

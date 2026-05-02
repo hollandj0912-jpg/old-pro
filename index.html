@@ -69,7 +69,7 @@ body{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:40px;
-  align-items:center;
+  align-items:start;
 }
 
 h1,h2,h3{
@@ -109,6 +109,35 @@ h1,h2,h3{
   margin-top:15px;
 }
 
+/* REVIEWS */
+.desktop-reviews{
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.review-card{
+  background:#1a1a1a;
+  padding:14px;
+  border-radius:8px;
+  border:1px solid #333;
+  font-size:14px;
+  color:#ccc;
+}
+
+.review-stars{
+  color:#cd7f32;
+  margin-bottom:6px;
+}
+
+.review-card span{
+  display:block;
+  margin-top:8px;
+  font-size:13px;
+  color:#888;
+}
+
 /* FORM */
 .form-box{
   background:#111;
@@ -138,7 +167,6 @@ button{
   color:#000;
 }
 
-/* ACTIONS */
 .actions a{
   display:block;
   margin-top:8px;
@@ -160,7 +188,7 @@ button{
   text-align:center;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section{
   margin-top:40px;
 }
@@ -239,6 +267,10 @@ button{
   .hero p{
     text-align:center;
   }
+
+  .desktop-reviews{
+    display:none;
+  }
 }
 </style>
 </head>
@@ -264,9 +296,9 @@ button{
 <div class="hero">
 
 <div>
-<h1>Your Roof Was Hit.<br>You Just Can’t See It Yet.</h1>
+<h1>Your Roof Was Hit.<br>You Just Can’t See It.</h1>
 
-<p><strong>DFW homeowners are getting their roofs approved right now — most had no idea there was damage.</strong></p>
+<p><strong>Burleson, Godley & Surrounding Area homeowners are getting their roofs approved right now — most had no idea there was damage.</strong></p>
 
 <p>Free inspection. No pressure. Just answers.</p>
 
@@ -276,22 +308,40 @@ button{
 </div>
 
 <img src="roof3.jpg" class="hero-img">
+
+<!-- REVIEWS -->
+<div class="desktop-reviews">
+
+<div class="review-card">
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<p>“They showed up on time and did a phenomenal job. Josh handled everything quickly and professionally… the whole process was smooth and painless.”</p>
+<span>- Misty Brown Ingle</span>
+</div>
+
+<div class="review-card">
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<p>“From inspection to final repair, everything was handled professionally. They even helped with my claim which made it much less stressful.”</p>
+<span>- Diamis Rebullosa</span>
+</div>
+
+</div>
+
 </div>
 
 <div class="form-box">
 <h3>Check If Your Roof Qualifies</h3>
 
-<form action="#" method="POST">
-<input type="text" name="name" placeholder="Full Name" required>
-<input type="tel" name="phone" placeholder="Phone Number" required>
-<input type="text" name="address" placeholder="Home Address" required>
+<form>
+<input type="text" placeholder="Full Name" required>
+<input type="tel" placeholder="Phone Number" required>
+<input type="text" placeholder="Home Address" required>
 
 <button>Check My Roof Now</button>
 </form>
 
 <div class="actions">
 <a href="tel:6822720473" class="call">📞 Call Now</a>
-<a href="sms:6822720473?body=Hey Josh, I saw your site and wanted to ask about a roof inspection" class="text">💬 Text Me</a>
+<a href="sms:6822720473" class="text">💬 Text Me</a>
 </div>
 </div>
 
@@ -309,9 +359,7 @@ button{
 
 <div class="about">
 <h2>About</h2>
-
 <img src="josh.jpg" class="about-img">
-
 <p>I’m a roofing specialist working with Old Pro Roofing, helping homeowners across DFW after storms.</p>
 <p>If everything looks good, I’ll tell you. If there’s damage, I’ll walk you through what to do next.</p>
 </div>
@@ -319,10 +367,10 @@ button{
 </div>
 
 <div class="sticky">
-  <div class="sticky-buttons">
-    <a href="tel:6822720473" class="sticky-call">📞 Call Now</a>
-    <a href="sms:6822720473?body=Hey Josh, I saw your site and wanted to ask about a roof inspection" class="sticky-text">💬 Text Me</a>
-  </div>
+<div class="sticky-buttons">
+<a href="tel:6822720473" class="sticky-call">📞 Call Now</a>
+<a href="sms:6822720473" class="sticky-text">💬 Text Me</a>
+</div>
 </div>
 
 </body>

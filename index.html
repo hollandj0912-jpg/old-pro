@@ -1,985 +1,416 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Old Pro Roofing, LLC — Free Storm Damage Inspection</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+
+<title>Free Roof Inspection | Old Pro Roofing</title>
+
 <style>
+:root{
+  --black:#000;
+  --dark:#111;
+  --bronze:#cd7f32;
+  --bronze2:#b87333;
+  --gray:#bbb;
+}
+
+body{
+  margin:0;
+  padding-bottom:90px;
+  font-family:'Inter', sans-serif;
+  background:#000;
+  color:#fff;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+/* HEADER */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.logo{ height:55px; }
+
+.socials{
+  display:flex;
+  gap:8px;
+}
+
+.socials a{
+  width:38px;
+  height:38px;
+  background:var(--bronze);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:6px;
+}
+
+.socials svg{
+  width:18px;
+  height:18px;
+  fill:#000;
+}
+
+/* HERO */
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:start;
+}
+
+h1,h2,h3{
+  font-family:'Oswald', sans-serif;
+}
+
+.hero h1{
+  font-size:46px;
+  line-height:1.05;
+}
+
+.hero p{
+  color:var(--gray);
+  font-size:18px;
+}
+
+/* TRUST */
+.trust-badges{
+  margin-top:12px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.trust-badges div{
+  background:#1a1a1a;
+  padding:6px 10px;
+  border-radius:6px;
+  font-size:13px;
+}
+
+/* IMAGE */
+.hero-img{
+  width:100%;
+  border-radius:10px;
+  margin-top:15px;
+}
 
-/* ── RESET & VARIABLES ── */
+/* RIGHT STACK */
+.right-stack{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+/* REVIEWS */
+.review-card{
+  background:#1a1a1a;
+  padding:14px;
+  border-radius:10px;
+  border:1px solid #333;
+  font-size:14px;
+  color:#ccc;
+}
+
+.review-stars{
+  color:var(--bronze);
+  margin-bottom:6px;
+}
+
+.review-card span{
+  display:block;
+  margin-top:8px;
+  font-size:12px;
+  color:#888;
+}
+
+/* FORM */
+.form-box{
+  background:#111;
+  padding:18px 16px;
+  border-radius:12px;
+  border:1px solid #333;
+}
+
+input{
+  width:100%;
+  padding:12px;
+  margin-top:8px;
+  border-radius:6px;
+  border:none;
+  font-size:15px;
+  box-sizing:border-box;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  margin-top:10px;
+  background:linear-gradient(135deg,var(--bronze),var(--bronze2));
+  border:none;
+  border-radius:6px;
+  font-size:16px;
+  font-weight:600;
+  color:#000;
+}
+
+.actions a{
+  display:block;
+  margin-top:6px;
+  padding:10px;
+  text-align:center;
+  border-radius:6px;
+  text-decoration:none;
+}
+
+.call{ background:#222; color:#fff; }
+.text{ background:#333; color:#fff; }
 
-- { margin: 0; padding: 0; box-sizing: border-box; }
+/* EXTRA IMAGE */
+.desktop-extra-img{
+  margin-top:15px;
+}
+
+.desktop-extra-img img{
+  width:100%;
+  border-radius:10px;
+  border:1px solid #333;
+}
+
+/* MOBILE REVIEW */
+.mobile-review{
+  display:none;
+  background:#1a1a1a;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #333;
+  font-size:14px;
+  color:#ccc;
+  margin-top:15px;
+}
+
+.mobile-review span{
+  display:block;
+  margin-top:6px;
+  font-size:12px;
+  color:#888;
+}
 
-:root {
-–bronze: #B87333;
-–bronze-bright:#C98040;
-–bronze-light: rgba(184, 115, 51, 0.13);
-–black: #000000;
-–card: #111111;
-–card2: #0a0a0a;
-–text: #ffffff;
-–muted: #888888;
-–border: #2a2a2a;
+/* PROOF */
+.proof{
+  background:#1a1a1a;
+  padding:15px;
+  margin-top:25px;
+  border-radius:8px;
+  text-align:center;
 }
 
-html, body {
-background: #000000;
-scroll-behavior: smooth;
+/* SECTION */
+.section{
+  margin-top:40px;
 }
 
-body {
-color: var(–text);
-font-family: ‘Barlow’, sans-serif;
-font-size: 16px;
-line-height: 1.5;
+.section h2{
+  color:var(--bronze);
 }
 
-img { display: block; max-width: 100%; }
+.section p{
+  color:var(--gray);
+}
 
-/* ── HEADER ── */
-header {
-background: #000000;
-border-bottom: 3px solid var(–bronze);
-padding: 16px 0;
-position: sticky;
-top: 0;
-z-index: 100;
+/* ABOUT */
+.about{
+  background:#0d0d0d;
+  padding:20px;
+  border-radius:10px;
+  border:1px solid #222;
+  margin-top:40px;
 }
 
-.header-inner {
-max-width: 1100px;
-margin: 0 auto;
-padding: 0 28px;
-display: flex;
-justify-content: space-between;
-align-items: center;
+.about-img{
+  width:100px;
+  border-radius:10px;
+  margin-bottom:10px;
 }
 
-.logo-link img {
-height: 54px;
-width: auto;
+/* STICKY */
+.sticky{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background:#000;
+  border-top:1px solid #333;
+  padding:10px;
 }
 
-.social-icons {
-display: flex;
-gap: 10px;
+.sticky-buttons{
+  display:flex;
+  gap:10px;
+  max-width:600px;
+  margin:auto;
 }
 
-.social-icons a {
-width: 42px;
-height: 42px;
-background: transparent;
-border: 1.5px solid var(–bronze);
-display: flex;
-align-items: center;
-justify-content: center;
-text-decoration: none;
-transition: background 0.2s, transform 0.15s;
-flex-shrink: 0;
+.sticky-call,
+.sticky-text{
+  flex:1;
+  text-align:center;
+  padding:14px;
+  border-radius:6px;
+  font-weight:600;
+  text-decoration:none;
 }
 
-.social-icons a:hover {
-background: var(–bronze);
-transform: translateY(-2px);
+.sticky-call{
+  background:var(--bronze);
+  color:#000;
 }
 
-/* Facebook & TikTok — filled SVG */
-.social-icons svg {
-width: 18px;
-height: 18px;
-fill: var(–bronze);
-display: block;
-transition: fill 0.2s;
-flex-shrink: 0;
-}
-
-.social-icons a:hover svg { fill: #ffffff; }
-
-/* Instagram — stroked SVG */
-.ig-svg {
-fill: none !important;
-stroke: var(–bronze);
-stroke-width: 2;
-stroke-linecap: round;
-stroke-linejoin: round;
-transition: stroke 0.2s;
-}
-
-.social-icons a:hover .ig-svg { stroke: #ffffff; }
-
-.ig-dot {
-fill: var(–bronze) !important;
-stroke: none !important;
-transition: fill 0.2s;
-}
-
-.social-icons a:hover .ig-dot { fill: #ffffff !important; }
-
-/* ── HERO ── */
-.hero {
-background: #000000;
-padding: 36px 0 30px;
-text-align: center;
-position: relative;
-overflow: hidden;
-}
-
-.hero::before {
-content: ‘’;
-position: absolute;
-top: 0; left: 50%;
-transform: translateX(-50%);
-width: 900px;
-height: 500px;
-background: radial-gradient(ellipse at center, rgba(184,115,51,0.07) 0%, transparent 70%);
-pointer-events: none;
-}
-
-.hero-inner {
-max-width: 820px;
-margin: 0 auto;
-padding: 0 28px;
-position: relative;
-}
-
-.hero h1 {
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: clamp(36px, 5.5vw, 66px);
-line-height: 1.0;
-margin-bottom: 14px;
-text-transform: uppercase;
-letter-spacing: 4px;
-color: #ffffff;
-}
-
-.hero .subhead {
-font-size: clamp(15px, 2vw, 18px);
-color: #cccccc;
-font-weight: 600;
-line-height: 1.55;
-margin-bottom: 8px;
-}
-
-.hero .tagline {
-font-size: 14px;
-color: var(–muted);
-margin-bottom: 8px;
-letter-spacing: 0.5px;
-}
-
-.urgency-line {
-font-size: 12px;
-color: var(–bronze-bright);
-font-weight: 700;
-margin-bottom: 18px;
-letter-spacing: 2px;
-text-transform: uppercase;
-}
-
-.cta-primary {
-display: inline-block;
-background: var(–bronze);
-color: #ffffff;
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: 24px;
-padding: 18px 56px;
-text-align: center;
-text-decoration: none;
-text-transform: uppercase;
-letter-spacing: 4px;
-border: none;
-cursor: pointer;
-margin-bottom: 22px;
-box-shadow: 0 4px 28px rgba(184,115,51,0.3);
-transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-}
-
-.cta-primary:hover {
-background: var(–bronze-bright);
-transform: translateY(-2px);
-box-shadow: 0 8px 36px rgba(184,115,51,0.4);
-}
-
-.badges {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 10px;
-}
-
-.badge {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-background: var(–card);
-border: 1px solid var(–border);
-padding: 10px 16px;
-font-size: 13px;
-font-weight: 600;
-letter-spacing: 0.3px;
-white-space: nowrap;
-}
-
-/* ── ROOF PHOTO ── */
-.roof-photo-section {
-width: 100%;
-overflow: hidden;
-position: relative;
-}
-
-.roof-photo-section::after {
-content: ‘’;
-position: absolute;
-bottom: 0; left: 0; right: 0;
-height: 100px;
-background: linear-gradient(transparent, #000000);
-pointer-events: none;
-}
-
-.roof-photo-section img {
-width: 100%;
-height: 420px;
-object-fit: cover;
-object-position: center;
-display: block;
-}
-
-/* ── TESTIMONIAL ── */
-.testimonial-wrap {
-background: var(–card);
-border-top: 1px solid var(–border);
-border-bottom: 1px solid var(–border);
-padding: 36px 0;
-position: relative;
-overflow: hidden;
-}
-
-.testimonial-wrap::before {
-content: ‘”’;
-position: absolute;
-top: -10px; left: 50%;
-transform: translateX(-50%);
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: 160px;
-color: var(–bronze);
-opacity: 0.06;
-line-height: 1;
-pointer-events: none;
-}
-
-.testimonial-inner {
-max-width: 680px;
-margin: 0 auto;
-padding: 0 28px;
-text-align: center;
-position: relative;
-}
-
-.stars { font-size: 20px; margin-bottom: 12px; }
-
-.testimonial-inner p {
-font-size: 18px;
-color: #dddddd;
-line-height: 1.7;
-font-style: italic;
-margin-bottom: 12px;
-}
-
-.reviewer {
-font-size: 12px;
-color: var(–muted);
-letter-spacing: 2px;
-text-transform: uppercase;
-}
-
-/* ── FORM ── */
-.form-section {
-background: #000000;
-padding: 68px 0;
-}
-
-.form-section-inner {
-max-width: 560px;
-margin: 0 auto;
-padding: 0 28px;
-}
-
-.form-section-inner h2 {
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: clamp(30px, 3.5vw, 42px);
-letter-spacing: 4px;
-text-align: center;
-margin-bottom: 6px;
-}
-
-.form-subtitle {
-text-align: center;
-font-size: 14px;
-color: var(–muted);
-margin-bottom: 26px;
-}
-
-.form-card {
-background: var(–card);
-padding: 32px 28px;
-border: 1px solid var(–border);
-border-top: 3px solid var(–bronze);
-}
-
-.form-card input {
-width: 100%;
-background: #f5f5f5;
-border: none;
-border-left: 3px solid transparent;
-padding: 15px 14px;
-font-size: 16px;
-color: #222;
-margin-bottom: 12px;
-outline: none;
-font-family: ‘Barlow’, sans-serif;
-transition: border-color 0.2s;
-display: block;
-}
-
-.form-card input:focus { border-left-color: var(–bronze); }
-.form-card input::placeholder { color: #999; }
-
-.form-submit {
-display: block;
-width: 100%;
-background: var(–bronze);
-color: #ffffff;
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: 22px;
-letter-spacing: 4px;
-text-transform: uppercase;
-text-align: center;
-padding: 17px;
-border: none;
-cursor: pointer;
-margin-top: 6px;
-box-shadow: 0 4px 20px rgba(184,115,51,0.2);
-transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-}
-
-.form-submit:hover {
-background: var(–bronze-bright);
-transform: translateY(-1px);
-box-shadow: 0 6px 28px rgba(184,115,51,0.35);
-}
-
-.form-note {
-text-align: center;
-font-size: 15px;
-color: #cccccc;
-font-weight: 600;
-margin-top: 14px;
-letter-spacing: 0.3px;
-}
-
-/* ── PROOF BAR ── */
-.proof-bar {
-background: var(–card2);
-border-top: 1px solid var(–border);
-border-bottom: 1px solid var(–border);
-padding: 30px 0;
-text-align: center;
-}
-
-.proof-bar-inner {
-max-width: 1100px;
-margin: 0 auto;
-padding: 0 28px;
-}
-
-.stat-row {
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 14px;
-}
-
-.big-stat {
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: 46px;
-color: var(–bronze);
-letter-spacing: 3px;
-line-height: 1;
-}
-
-.stat-label {
-font-size: 17px;
-font-weight: 700;
-line-height: 1.3;
-text-align: left;
-}
-
-.sub-line {
-margin-top: 8px;
-font-size: 14px;
-color: #aaaaaa;
-font-weight: 600;
-}
-
-.sub-line span { color: var(–bronze-bright); }
-
-/* ── RECENT JOB ── */
-.recent-job {
-background: #000000;
-padding: 72px 0;
-}
-
-.recent-job-inner {
-max-width: 1100px;
-margin: 0 auto;
-padding: 0 28px;
-}
-
-.two-col {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 52px;
-align-items: center;
-}
-
-.section-label {
-font-size: 11px;
-color: var(–bronze);
-letter-spacing: 4px;
-text-transform: uppercase;
-font-weight: 700;
-margin-bottom: 10px;
-}
-
-.section-title {
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: clamp(28px, 3.5vw, 46px);
-line-height: 1.05;
-margin-bottom: 20px;
-text-transform: uppercase;
-letter-spacing: 3px;
-}
-
-.section-title span { color: var(–bronze); }
-
-.job-photo-wrap {
-position: relative;
-overflow: hidden;
-box-shadow: 0 12px 56px rgba(0,0,0,0.6);
-}
-
-.job-photo-wrap img {
-width: 100%;
-height: 340px;
-object-fit: cover;
-display: block;
-}
-
-.outcome-badge {
-position: absolute;
-bottom: 0; left: 0; right: 0;
-background: rgba(0,0,0,0.92);
-border-top: 2px solid var(–bronze);
-padding: 14px 16px;
-display: flex;
-align-items: center;
-gap: 12px;
-}
-
-.outcome-badge .check { font-size: 20px; flex-shrink: 0; }
-
-.outcome-badge .outcome-text {
-font-size: 14px;
-font-weight: 600;
-color: white;
-line-height: 1.4;
-}
-
-.outcome-badge .outcome-text strong {
-color: var(–bronze-bright);
-display: block;
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: 17px;
-letter-spacing: 1px;
-}
-
-.job-caption {
-font-size: 18px;
-color: #cccccc;
-line-height: 1.6;
-font-style: italic;
-border-left: 3px solid var(–bronze);
-padding-left: 18px;
-}
-
-.job-caption strong { color: white; font-style: normal; }
-
-/* ── ABOUT ── */
-.about-section {
-background: var(–card2);
-border-top: 1px solid var(–border);
-border-bottom: 1px solid var(–border);
-padding: 72px 0;
-}
-
-.about-inner {
-max-width: 1100px;
-margin: 0 auto;
-padding: 0 28px;
-}
-
-.about-grid {
-display: grid;
-grid-template-columns: 280px 1fr;
-gap: 60px;
-align-items: center;
-}
-
-.rep-photo-wrap { text-align: center; }
-
-.rep-photo-wrap img {
-width: 200px;
-height: 200px;
-object-fit: cover;
-border: 3px solid var(–bronze);
-margin: 0 auto 16px;
-box-shadow: 0 8px 36px rgba(0,0,0,0.5);
-display: block;
-}
-
-.rep-name {
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: 28px;
-text-align: center;
-margin-bottom: 4px;
-letter-spacing: 3px;
-}
-
-.rep-title {
-text-align: center;
-font-size: 11px;
-color: var(–bronze-bright);
-letter-spacing: 2px;
-text-transform: uppercase;
-font-weight: 600;
-}
-
-.about-label {
-font-size: 11px;
-color: var(–bronze);
-letter-spacing: 4px;
-text-transform: uppercase;
-font-weight: 700;
-margin-bottom: 16px;
-}
-
-.about-divider {
-height: 1px;
-background: var(–border);
-margin-bottom: 20px;
-}
-
-.about-body p {
-font-size: 16px;
-color: #cccccc;
-line-height: 1.7;
-margin-bottom: 16px;
-}
-
-.about-body p:last-child { margin-bottom: 0; }
-
-.highlight-line {
-background: var(–bronze-light);
-border-left: 3px solid var(–bronze);
-padding: 14px 18px;
-font-size: 15px;
-color: white;
-font-weight: 600;
-line-height: 1.65;
-margin-top: 6px;
-}
-
-/* ── DESKTOP CONTACT BAR ── */
-.desktop-contact-bar {
-display: none;
-background: #000000;
-border-top: 3px solid var(–bronze);
-padding: 28px 0;
-text-align: center;
-}
-
-.desktop-contact-inner {
-max-width: 1100px;
-margin: 0 auto;
-padding: 0 28px;
-display: flex;
-justify-content: center;
-gap: 20px;
-align-items: center;
-flex-wrap: wrap;
-}
-
-.desktop-contact-inner a {
-display: inline-flex;
-align-items: center;
-gap: 10px;
-padding: 16px 40px;
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: 20px;
-text-decoration: none;
-letter-spacing: 3px;
-transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-}
-
-.desktop-contact-inner a:hover { transform: translateY(-2px); }
-
-.btn-call {
-background: var(–bronze);
-color: white;
-box-shadow: 0 4px 20px rgba(184,115,51,0.25);
-}
-
-.btn-call:hover { background: var(–bronze-bright) !important; }
-
-.btn-text {
-background: #1a1a1a;
-color: white;
-border: 1px solid var(–border);
-}
-
-.btn-text:hover { background: #2a2a2a !important; }
-
-/* ── MOBILE STICKY BAR ── */
-.sticky-bar {
-display: none;
-position: fixed;
-bottom: 0; left: 0; right: 0;
-grid-template-columns: 1fr 1fr;
-z-index: 200;
-}
-
-.sticky-call {
-background: var(–bronze);
-color: white;
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: 20px;
-padding: 18px;
-border: none;
-cursor: pointer;
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 8px;
-text-decoration: none;
-letter-spacing: 2px;
-transition: background 0.2s;
-}
-
-.sticky-call:hover { background: var(–bronze-bright); }
-
-.sticky-text {
-background: #1a1a1a;
-color: white;
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: 20px;
-padding: 18px;
-border: none;
-border-left: 1px solid var(–border);
-cursor: pointer;
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 8px;
-text-decoration: none;
-letter-spacing: 2px;
-transition: background 0.2s;
-}
-
-.sticky-text:hover { background: #2a2a2a; }
-
-/* ── RESPONSIVE: TABLET (max 900px) ── */
-@media (max-width: 900px) {
-.two-col {
-grid-template-columns: 1fr;
-gap: 28px;
-}
-.about-grid {
-grid-template-columns: 1fr;
-gap: 32px;
-}
-.rep-photo-wrap {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-}
-
-/* ── RESPONSIVE: MOBILE (max 600px) ── */
-@media (max-width: 600px) {
-body { padding-bottom: 80px; }
-
-```
-.sticky-bar { display: grid; }
-.desktop-contact-bar { display: none !important; }
-
-.header-inner { padding: 0 18px; }
-.logo-link img { height: 44px; }
-.social-icons a { width: 36px; height: 36px; }
-.social-icons svg { width: 16px; height: 16px; }
-
-.hero { padding: 28px 0 24px; }
-.hero-inner { padding: 0 18px; }
-
-.cta-primary {
-display: block;
-width: 100%;
-padding: 18px;
-font-size: 20px;
-}
-
-.badges { justify-content: flex-start; }
-.badge { white-space: normal; font-size: 12px; padding: 8px 12px; }
-
-.roof-photo-section img { height: 220px; }
-
-.testimonial-wrap { padding: 28px 0; }
-.testimonial-inner { padding: 0 18px; }
-.testimonial-inner p { font-size: 16px; }
-
-.form-section { padding: 44px 0; }
-.form-section-inner { padding: 0 18px; }
-.form-card { padding: 22px 16px; }
-
-.proof-bar { padding: 22px 0; }
-.proof-bar-inner { padding: 0 18px; }
-.big-stat { font-size: 36px; }
-.stat-label { font-size: 15px; }
-
-.recent-job { padding: 44px 0; }
-.recent-job-inner { padding: 0 18px; }
-.job-photo-wrap img { height: 220px; }
-.job-caption { font-size: 16px; }
-
-.about-section { padding: 44px 0; }
-.about-inner { padding: 0 18px; }
-.rep-photo-wrap img { width: 140px; height: 140px; }
-```
-
-}
-
-/* ── RESPONSIVE: DESKTOP (min 601px) ── */
-@media (min-width: 601px) {
-.sticky-bar { display: none; }
-.desktop-contact-bar { display: block; }
+.sticky-text{
+  background:#333;
+  color:#fff;
 }
+
+/* MOBILE */
+@media(max-width:800px){
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:30px;
+    text-align:center;
+  }
+
+  .hero p{
+    text-align:center;
+  }
 
+  /* KEEP FORM */
+  .right-stack{
+    display:flex;
+  }
+
+  /* HIDE DESKTOP REVIEWS */
+  .review-card{
+    display:none;
+  }
+
+  /* SHOW MOBILE REVIEW */
+  .mobile-review{
+    display:block;
+  }
+
+  /* HIDE EXTRA IMAGE */
+  .desktop-extra-img{
+    display:none;
+  }
+}
 </style>
 </head>
+
 <body>
 
-<!-- ═══════════════════════════
-HEADER
-═══════════════════════════ -->
+<div class="container">
 
-<header>
-<div class="header-inner">
-
-```
-<a href="https://www.oldproroofing.com" class="logo-link">
-<img src="logo.png" alt="Old Pro Roofing LLC" />
+<!-- HEADER -->
+<div class="header">
+<a href="https://www.oldproroofing.com" target="_blank">
+<img src="logo.png" class="logo">
 </a>
 
-<div class="social-icons">
-
-<!-- Facebook -->
-<a href="https://www.facebook.com/share/1JBHcDo1q9/?mibextid=wwXIfr"
-target="_blank" rel="noopener" aria-label="Facebook">
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-</svg>
-</a>
-
-<!-- Instagram -->
-<a href="https://www.instagram.com/oldprojosh?igsh=MTZqaWJudXlqYm82cg%3D%3D&utm_source=qr"
-target="_blank" rel="noopener" aria-label="Instagram">
-<svg class="ig-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-<circle cx="12" cy="12" r="4"/>
-<circle class="ig-dot" cx="17.5" cy="6.5" r="1.2"/>
-</svg>
-</a>
-
-<!-- TikTok -->
-<a href="https://www.tiktok.com/@oldprojosh?_r=1&_t=ZP-961J7W8TPKA"
-target="_blank" rel="noopener" aria-label="TikTok">
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.17 8.17 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
-</svg>
-</a>
-
-</div>
-</div>
-```
-
-</header>
-
-<!-- ═══════════════════════════
-HERO
-═══════════════════════════ -->
-
-<section class="hero">
-<div class="hero-inner">
-<h1>Storm Damage Just Hit Your Area. Most Roofs Qualify for Replacement — Check Yours Free.</h1>
-<p class="subhead">Burleson, Godley &amp; Surrounding Area homeowners are getting roofs approved right now — many had no idea there was damage.</p>
-<p class="tagline">Free inspection. No pressure. Just answers.</p>
-<p class="urgency-line">⚡ Inspections filling up fast — limited slots this week</p>
-<a href="#form" class="cta-primary">Check My Roof →</a>
-<div class="badges">
-<div class="badge">⭐ 231 Five-Star Reviews — 5.0 Google Rating</div>
-<div class="badge">A+ BBB Rated</div>
-<div class="badge">✅ 9 out of 10 roofs we inspect qualify for replacement</div>
-</div>
-</div>
-</section>
-
-<!-- ═══════════════════════════
-ROOF PHOTO
-═══════════════════════════ -->
-
-<div class="roof-photo-section">
-<img src="roof3.jpg" alt="New roof installed by Old Pro Roofing LLC" />
-</div>
-
-<!-- ═══════════════════════════
-TESTIMONIAL
-═══════════════════════════ -->
-
-<div class="testimonial-wrap">
-<div class="testimonial-inner">
-<div class="stars">⭐⭐⭐⭐⭐</div>
-<p>"Handled everything quickly and professionally... the whole process was smooth and painless."</p>
-<div class="reviewer">— Misty Brown Ingle</div>
+<div class="socials">
+<a href="https://www.facebook.com/profile.php?id=61588429941873"><svg viewBox="0 0 24 24"><path d="M13 22v-8h3l1-4h-4V7c0-1 0-2 2-2h2V1h-3c-4 0-5 2-5 5v4H6v4h3v8z"/></svg></a>
+<a href="https://www.instagram.com/oldprojosh/"><svg viewBox="0 0 24 24"><path d="M7 2h10c3 0 5 2 5 5v10c0 3-2 5-5 5H7c-3 0-5-2-5-5V7c0-3 2-5 5-5zm5 5a5 5 0 100 10 5 5 0 000-10z"/></svg></a>
+<a href="https://www.tiktok.com/@oldprojosh"><svg viewBox="0 0 24 24"><path d="M16 1v4c1 1 3 2 5 2v4c-2 0-4-1-5-2v7a6 6 0 11-6-6h1v4h-1a2 2 0 102 2V1h4z"/></svg></a>
 </div>
 </div>
 
-<!-- ═══════════════════════════
-FORM
-═══════════════════════════ -->
+<!-- HERO -->
+<div class="hero">
 
-<section class="form-section" id="form">
-<div class="form-section-inner">
-<h2>Schedule A Free Inspection</h2>
-<p class="form-subtitle">We'll come out, get on your roof, and tell you exactly what we find.</p>
-<div class="form-card">
-<input type="text" placeholder="Full Name" name="name" autocomplete="name" />
-<input type="tel" placeholder="Phone Number" name="phone" autocomplete="tel" />
-<input type="text" placeholder="Home Address" name="address" autocomplete="street-address" />
-<button class="form-submit" type="submit">Check My Roof Now</button>
-<p class="form-note">📞 We typically respond within the hour</p>
-</div>
-</div>
-</section>
+<!-- LEFT -->
+<div>
+<h1>
+Storm Damage Just Hit Your Area.<br>
+Most Roofs Qualify for Replacement — Check Yours Free.
+</h1>
 
-<!-- ═══════════════════════════
-PROOF BAR
-═══════════════════════════ -->
+<p><strong>Burleson, Godley & Surrounding Area homeowners are getting roofs approved right now — most had no idea there was damage.</strong></p>
 
-<div class="proof-bar">
-<div class="proof-bar-inner">
-<div class="stat-row">
-<span class="big-stat">231+</span>
-<span class="stat-label">Roofs Replaced<br>Across DFW</span>
+<p>Free inspection. No pressure. Just answers.</p>
+
+<div class="trust-badges">
+<div>⭐ 5.0 Google Rating (231 Reviews)</div>
+<div>A+ BBB Rated</div>
 </div>
-<p class="sub-line">Most homeowners are <span>surprised by what their insurance covers.</span></p>
+
+<img src="roof2.jpg" class="hero-img">
+
+<div class="mobile-review">
+⭐⭐⭐⭐⭐ “Handled everything quickly and professionally… the whole process was smooth and painless.”
+<span>- Misty Brown Ingle</span>
 </div>
 </div>
 
-<!-- ═══════════════════════════
-RECENT JOB
-═══════════════════════════ -->
+<!-- RIGHT -->
+<div class="right-stack">
 
-<section class="recent-job">
-<div class="recent-job-inner">
-<div class="two-col">
-
-```
-<div class="job-photo-wrap">
-<img src="main-roof.jpg" alt="Recent roof replacement in Burleson TX" />
-<div class="outcome-badge">
-<div class="check">✅</div>
-<div class="outcome-text">
-<strong>Full Replacement — Approved.</strong>
-Started with a free inspection. That's it.
-</div>
-</div>
+<div class="review-card">
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<p>“They showed up on time and did a phenomenal job. Josh handled everything quickly and professionally… the whole process was smooth and painless.”</p>
+<span>- Misty Brown Ingle</span>
 </div>
 
-<div class="job-text">
-<div class="section-label">Just Completed</div>
-<div class="section-title">We Just Replaced This Roof in <span>Burleson.</span></div>
-<p class="job-caption">"One call. One inspection. <strong>Brand new roof.</strong>"</p>
+<div class="review-card">
+<div class="review-stars">⭐⭐⭐⭐⭐</div>
+<p>“From inspection to final repair, everything was handled professionally. They even helped with my claim which made it much less stressful.”</p>
+<span>- Diamis Rebullosa</span>
 </div>
 
-</div>
-</div>
-```
+<div class="form-box">
+<h3>Check If Your Roof Qualifies</h3>
 
-</section>
+<form>
+<input type="text" placeholder="Full Name" required>
+<input type="tel" placeholder="Phone Number" required>
+<input type="text" placeholder="Home Address" required>
 
-<!-- ═══════════════════════════
-ABOUT
-═══════════════════════════ -->
+<button>Check My Roof Now</button>
+</form>
 
-<section class="about-section">
-<div class="about-inner">
-<div class="about-grid">
-
-```
-<div class="rep-photo-wrap">
-<img src="josh.jpg" alt="Josh Holland — Roofing Specialist, Old Pro Roofing LLC" />
-<div class="rep-name">Josh Holland</div>
-<div class="rep-title">Roofing Specialist · Old Pro Roofing, LLC</div>
-</div>
-
-<div class="about-content">
-<div class="about-label">Who You're Working With</div>
-<div class="about-divider"></div>
-<div class="about-body">
-<p>I'm a roofing specialist with Old Pro Roofing, LLC, helping homeowners across DFW after storms. I'll come out, get on your roof, and tell you exactly what I find.</p>
-<p>No pressure, no guessing. Just a straight answer about what's up there.</p>
-<div class="highlight-line">
-"If everything looks good, I'll tell you.<br>
-If there's damage, I'll walk you through what to do next."
-</div>
+<div class="actions">
+<a href="tel:6822720473" class="call">📞 Call Now</a>
+<a href="sms:6822720473" class="text">💬 Text Me</a>
 </div>
 </div>
 
-</div>
-</div>
-```
-
-</section>
-
-<!-- ═══════════════════════════
-DESKTOP CONTACT BAR
-═══════════════════════════ -->
-
-<div class="desktop-contact-bar">
-<div class="desktop-contact-inner">
-<a href="tel:6822720473" class="btn-call">📞 Call Now — (682) 272-0473</a>
-<a href="sms:6822720473" class="btn-text">💬 Text Me</a>
-</div>
+<div class="desktop-extra-img">
+<img src="replacement.jpg" alt="Roof Replacement">
 </div>
 
-<!-- ═══════════════════════════
-MOBILE STICKY BAR
-═══════════════════════════ -->
+</div>
 
-<div class="sticky-bar">
+</div>
+
+</div>
+
+<!-- STICKY -->
+<div class="sticky">
+<div class="sticky-buttons">
 <a href="tel:6822720473" class="sticky-call">📞 Call Now</a>
 <a href="sms:6822720473" class="sticky-text">💬 Text Me</a>
+</div>
 </div>
 
 </body>

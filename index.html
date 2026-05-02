@@ -10,10 +10,8 @@
 
 <style>
 :root{
-  --black:#000;
-  --dark:#111;
   --bronze:#cd7f32;
-  --bronze2:#b87333;
+  --dark:#111;
   --gray:#bbb;
 }
 
@@ -33,16 +31,6 @@ body{
   padding:20px;
 }
 
-/* HEADER */
-.header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:20px;
-}
-
-.logo{ height:55px; }
-
 /* HERO */
 .hero{
   display:grid;
@@ -54,8 +42,13 @@ h1,h2,h3{
   font-family:'Oswald', sans-serif;
 }
 
-.hero h1{font-size:46px;}
-.hero p{color:var(--gray);}
+.hero h1{
+  font-size:46px;
+}
+
+.hero p{
+  color:var(--gray);
+}
 
 /* URGENCY */
 .urgency{
@@ -79,23 +72,24 @@ h1,h2,h3{
   font-size:13px;
 }
 
+/* CTA */
+.mobile-cta{
+  display:none;
+  margin-top:15px;
+  padding:14px;
+  background:linear-gradient(135deg,#cd7f32,#b87333);
+  text-align:center;
+  color:#000;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+}
+
 /* IMAGE */
 .hero-img{
   width:100%;
   border-radius:10px;
   margin-top:15px;
-}
-
-/* MOBILE CTA */
-.mobile-cta{
-  display:none;
-  margin-top:15px;
-  padding:14px;
-  background:linear-gradient(135deg,var(--bronze),var(--bronze2));
-  text-align:center;
-  color:#000;
-  border-radius:8px;
-  text-decoration:none;
 }
 
 /* RIGHT STACK */
@@ -110,7 +104,6 @@ h1,h2,h3{
   background:#1a1a1a;
   padding:14px;
   border-radius:10px;
-  border:1px solid #333;
 }
 
 /* FORM */
@@ -139,9 +132,10 @@ button{
   width:100%;
   padding:14px;
   margin-top:10px;
-  background:linear-gradient(135deg,var(--bronze),var(--bronze2));
+  background:linear-gradient(135deg,#cd7f32,#b87333);
   border:none;
   border-radius:6px;
+  font-weight:600;
 }
 
 /* RESPONSE */
@@ -152,7 +146,7 @@ button{
   margin-top:8px;
 }
 
-/* PROOF LINE */
+/* POST FORM */
 .post-form-proof{
   text-align:center;
   font-size:13px;
@@ -175,23 +169,92 @@ button{
   margin-top:10px;
 }
 
-/* SECTIONS */
-.section{
-  margin-top:40px;
+/* ===== BOTTOM SECTION ===== */
+
+/* PROOF STRIP */
+.proof-strip{
+  border-top:2px solid #cd7f32;
+  padding:25px 15px;
+  text-align:center;
 }
 
-.section h2{color:var(--bronze);}
+.proof-number{
+  font-size:42px;
+  color:#cd7f32;
+  font-weight:700;
+}
 
-.about{
-  background:#0d0d0d;
+.proof-text span{
+  color:#aaa;
+}
+
+/* JOB */
+.job-section{
   padding:20px;
-  border-radius:10px;
-  margin-top:40px;
+}
+
+.job-img{
+  width:100%;
+  border:1px solid #333;
+}
+
+.job-result{
+  padding:15px;
+  border-top:2px solid #cd7f32;
+}
+
+/* STATEMENT */
+.statement{
+  padding:30px 20px;
+}
+
+.statement .label{
+  letter-spacing:3px;
+  font-size:12px;
+  color:#cd7f32;
+}
+
+.statement h2{
+  font-size:32px;
+}
+
+.statement span{
+  color:#cd7f32;
+}
+
+.quote{
+  color:#aaa;
+  font-style:italic;
+}
+
+/* ABOUT */
+.about-section{
+  text-align:center;
+  padding:30px 20px;
 }
 
 .about-img{
-  width:100px;
-  border-radius:10px;
+  width:140px;
+  border:3px solid #cd7f32;
+}
+
+.role{
+  color:#cd7f32;
+  letter-spacing:2px;
+  font-size:12px;
+}
+
+.who{
+  margin-top:20px;
+  color:#cd7f32;
+  letter-spacing:2px;
+}
+
+.about-highlight{
+  background:#1a120c;
+  padding:15px;
+  margin-top:15px;
+  border-left:3px solid #cd7f32;
 }
 
 /* STICKY */
@@ -199,28 +262,25 @@ button{
   position:fixed;
   bottom:0;
   width:100%;
-  background:#000;
-  border-top:1px solid #333;
-  padding:10px;
-}
-
-.sticky-buttons{
   display:flex;
-  gap:10px;
-  max-width:600px;
-  margin:auto;
 }
 
-.sticky-buttons a{
+.sticky a{
   flex:1;
+  padding:15px;
   text-align:center;
-  padding:14px;
-  border-radius:6px;
   text-decoration:none;
 }
 
-.sticky-call{background:var(--bronze); color:#000;}
-.sticky-text{background:#333; color:#fff;}
+.sticky-call{
+  background:#cd7f32;
+  color:#000;
+}
+
+.sticky-text{
+  background:#222;
+  color:#fff;
+}
 
 /* MOBILE */
 @media(max-width:800px){
@@ -237,13 +297,8 @@ button{
 
 <div class="container">
 
-<div class="header">
-<img src="logo.png" class="logo">
-</div>
-
 <div class="hero">
 
-<!-- LEFT -->
 <div>
 <h1>Storm Damage Just Hit Your Area.<br>Most Roofs Qualify — Check Yours Free.</h1>
 
@@ -252,19 +307,18 @@ button{
 <div class="urgency">⚡ Inspections filling up fast — limited slots available</div>
 
 <div class="trust-badges">
-<div>⭐ 5.0 Google Rating (231 Reviews)</div>
+<div>⭐ 5.0 Google Rating</div>
 <div>A+ BBB Rated</div>
-<div>🏠 9 out of 10 roofs qualify</div>
+<div>✅ 9 out of 10 roofs qualify</div>
 </div>
 
 <a href="#roof-form" class="mobile-cta">Check My Roof</a>
 
-<img src="roof2.jpg" class="hero-img">
+<img src="roof3.jpg" class="hero-img">
 
 <div class="mobile-review">⭐⭐⭐⭐⭐ Smooth and painless experience</div>
 </div>
 
-<!-- RIGHT -->
 <div class="right-stack">
 
 <div class="review-card">⭐⭐⭐⭐⭐ Smooth and painless</div>
@@ -272,19 +326,24 @@ button{
 
 <div class="form-box" id="roof-form">
 <h3>Check If Your Roof Qualifies</h3>
-<p class="form-sub">We’ll come out, get on your roof, and tell you exactly what we find.</p>
+
+<p class="form-sub">
+We’ll come out, get on your roof, and tell you exactly what we find.
+</p>
 
 <form>
 <input placeholder="Full Name">
 <input placeholder="Phone">
 <input placeholder="Address">
+
 <button>Check My Roof Now</button>
-<div class="response-time">📞 We respond within the hour</div>
+
+<div class="response-time">📞 We typically respond within the hour</div>
 </form>
 </div>
 
 <div class="post-form-proof">
-231+ roofs replaced — most homeowners are surprised by insurance coverage
+231+ roofs replaced across DFW — most homeowners are surprised by what their insurance covers.
 </div>
 
 <div class="desktop-extra-img">
@@ -295,27 +354,59 @@ button{
 
 </div>
 
-<!-- PROOF -->
-<div class="section">
-<h2>Recent Roof We Helped Replace</h2>
-<img src="before-after.jpg" class="hero-img">
+<!-- ===== BOTTOM ===== -->
+
+<div class="proof-strip">
+<div class="proof-number">231+</div>
+<div>Roofs Replaced Across DFW<br>
+<span>Most homeowners are surprised by what their insurance covers.</span></div>
 </div>
 
-<!-- ABOUT -->
-<div class="about">
-<h2>About</h2>
-<img src="Josh.jpg" class="about-img">
-<p>I help homeowners across DFW after storms. If everything looks good, I’ll tell you. If not, I’ll walk you through next steps.</p>
+<div class="job-section">
+<h3>Recent roof replacement in Burleson TX</h3>
+<img src="main-roof.jpg" class="job-img">
+
+<div class="job-result">
+✅ <strong>FULL REPLACEMENT — APPROVED.</strong><br>
+Started with a free inspection.
+</div>
+</div>
+
+<div class="statement">
+<p class="label">JUST COMPLETED</p>
+<h2>WE JUST REPLACED THIS ROOF IN <span>BURLESON.</span></h2>
+<p class="quote">"One call. One inspection. Brand new roof."</p>
+</div>
+
+<div class="about-section">
+<img src="josh.jpg" class="about-img">
+
+<h2>JOSH HOLLAND</h2>
+<p class="role">ROOFING SPECIALIST · OLD PRO ROOFING, LLC</p>
+
+<h4 class="who">WHO YOU’RE WORKING WITH</h4>
+
+<p>
+I'm a roofing specialist helping homeowners across DFW after storms.
+I'll come out, get on your roof, and tell you exactly what I find.
+</p>
+
+<p>
+No pressure. Just a straight answer about what's up there.
+</p>
+
+<div class="about-highlight">
+"If everything looks good, I'll tell you.<br>
+If there's damage, I'll walk you through what to do next."
+</div>
 </div>
 
 </div>
 
 <!-- STICKY -->
 <div class="sticky">
-<div class="sticky-buttons">
-<a href="tel:6822720473" class="sticky-call">Call</a>
-<a href="sms:6822720473" class="sticky-text">Text</a>
-</div>
+<a href="tel:6822720473" class="sticky-call">📞 Call Now</a>
+<a href="sms:6822720473" class="sticky-text">💬 Text Me</a>
 </div>
 
 </body>

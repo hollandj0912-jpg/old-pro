@@ -1,540 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
-<title>Roof Repair in Burleson TX | Roof Inspections & Replacement | Josh Holland</title>
-
-<meta name="description" content="Roof repair in Burleson TX, inspections, and replacement. Serving Johnson County, Tarrant County, and DFW. Work directly with Josh Holland.">
-
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Free Roof Inspection</title>
 
 <style>
-*{box-sizing:border-box;}
-body{margin:0;font-family:'Inter',sans-serif;background:#0b0b0b;color:#fff;}
-h2,h3{font-family:'Oswald',sans-serif;}
-
-.section{padding:60px 20px;max-width:1100px;margin:auto;}
-.center{text-align:center;}
-
-.btn{
-  display:block;
-  width:100%;
-  max-width:260px;
-  margin:8px auto;
-  padding:12px 16px;
-
-  background: linear-gradient(145deg, #cfa85a, #8c6a2a);
-  color:#000;
-
-  text-decoration:none;
-  font-weight:700;
-  font-size:14px;
-  
-  border-radius:6px;
-  border:1px solid rgba(255,215,120,0.4);
-
-  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #111;
 }
 
-/* HEADER */
-header{
-position:absolute;
-top:0;
-left:0;
-padding:12px;
-z-index:10;
-}
-header img{
-  height: auto;
-  width: clamp(90px, 8vw, 200px);
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
 }
 
-/* SOCIAL */
-.social-header{
-position:absolute;
-top:15px;
-right:15px;
-display:flex;
-gap:10px;
-z-index:10;
-}
-.social-header a{
-width:36px;height:36px;
-display:flex;align-items:center;justify-content:center;
-background:rgba(0,0,0,0.7);
-border:1px solid rgba(255,255,255,0.2);
-border-radius:6px;
-color:#e0b46a;
-}
-.social-header a:hover{
-background:#e0b46a;color:#000;
+h1 {
+  font-size: 28px;
+  line-height: 1.2;
+  margin-bottom: 10px;
 }
 
-/* HERO */
-.hero{
-background:url('main-roof.jpg') center/cover no-repeat;
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-position:relative;
-}
-.hero::before{
-content:'';
-position:absolute;
-inset:0;
-background:linear-gradient(to bottom, rgba(0,0,0,.6), rgba(0,0,0,.95));
-}
-.hero-content{position:relative;max-width:650px;padding:20px;}
-
-.hero-img{
-width:200px;
-max-width:80%;
-margin-bottom:20px;
-border-radius:8px;
-border:2px solid rgba(255,255,255,0.08);
-box-shadow:0 10px 30px rgba(0,0,0,0.7);
+h2 {
+  font-size: 22px;
+  margin-top: 40px;
 }
 
-.hero h1{
-font-size:48px;
-color:#e0b46a;
-margin:10px 0;
-}
-
-.hero h2{
-  font-size:24px;
-  margin:0;
-  color:#e6c27a;
-  text-shadow:
-    0 0 6px rgba(230, 194, 122, 0.8),
-    0 0 12px rgba(230, 194, 122, 0.6),
-    0 0 18px rgba(230, 194, 122, 0.4);
-}
-.hero p{color:#ccc;font-size:15px;}
-
-@media(min-width:768px){
-.hero h1{font-size:56px;}
-}
-
-/* TRUST */
-.trust{
-background:#111;
-padding:15px;
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:10px;
-font-size:13px;
-}
-.trust span {
-  color:#e6c27a;
-  text-shadow:
-    0 0 6px rgba(230, 194, 122, 0.8),
-    0 0 12px rgba(230, 194, 122, 0.6),
-    0 0 18px rgba(230, 194, 122, 0.4);
-}
-
-/* GRID */
-.grid{display:grid;gap:15px;}
-@media(min-width:700px){.grid-2{grid-template-columns:1fr 1fr;}}
-
-.card{
-background:#141414;
-padding:18px;
-border-radius:8px;
-border:1px solid #222;
-}
-
-.gallery img{
-width:100%;
-border-radius:8px;
-}
-
-/* REVIEWS */
-.card p:first-child{
-color:#e0b46a;
-font-size:18px;
-}
-
-/* AREAS */
-.areas{
-text-align:center;
-color:#fff
-line-height:1.8;
-}
-
-/* CONTACT FIX */
-.contact a,
-.contact a:link,
-.contact a:visited{
-color:#fff !important;
-text-decoration:none !important;
-font-weight:600;
-}
-
-.contact a:hover{color:#e0b46a; !important;}
-
-.outline-text{
-color:#e0b46a: !important;
-/* softer, darker outline */
--webkit-text-stroke: 0.8px #c8c8c8;
-/*depth instead of harsh border */
-text-shadow:
-0 2px 6px rgba(0,0,0,0.6),
-0 0 1px rgba(255,255,255,0.2);
-
-/* stronger presence */
-font-weight:900;
-letter-spacing:2px;
-}
-
-.outline-soft{
-  /* ❌ REMOVE color */
-  /* color: #e6e6e6; */
-
--webkit-text-stroke: 0.25px rgba (0,0,0,0.4)
-
-  text-shadow:
-    0 1px 2px rgba(0,0,0,0.5), 
-    0 0 4px rgba(0,000.25);
-  
- font-weight: 600;
-}
-
-
-
-.brand-exact{
-text-align:center;
-margin-top:20px;
-}
-
-name-script{
-font-family:'Great Vibes', cursive !important;
-font-size:56px;
-color:#d4af37; /* bronze gold */
-margin-bottom: 12px;
-text-shadow:0 2px 4px rgba(0,0,0,0.6);
-}
-
-.gold-bar{
-width:140px;
-height:3px;
-background:#a8823c;
-margin:10px auto;
-}
-
-.specialist-row{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:12px;
-}
-
-.line{
-width:50px;
-height:2px;
-background:#a8823c;
-}
-
-.specialist-row h2{
-font-family:'Oswald', sans-serif;
-font-size:12px;
-letter-spacing:3px;
-color:#a8823c;
-margin:0;
-}
-
-.name-script {
-  font-family: 'Great Vibes', cursive !important;
-  font-size: 52px;
-  color: #a8823c;
-}
-
-.name-script {
-  font-family: 'Great Vibes', cursive !important;
-  font-size: 56px;
-  color: #e6c27a;
-
-  /* 🔥 OULINE + DEPTH */
-  -webkit-text-stroke: 1px #8a6a2c;
-  text-shadow:
-    0 2px 4px rgba(0,0,0,0.6),
-    0 0 2px #8a6a2c;
-
-  margin-bottom: 12px;
-}
-
-.tagline {
-  text-align: center;
+p {
   font-size: 16px;
-  color: #ffffff;
-  margin-top: 10px;
-  font-weight: 500;
+  line-height: 1.5;
 }
 
-
-/* =========================
-   DESKTOP FIX (FORCE SCALE)
-========================= */
-@media (min-width: 768px) {
-
-  .name-script {
-    font-size: 72px !important;
-  }
-
-  .specialist-row h2 {
-    font-size: 18px !important;
-    letter-spacing: 3px;
-  }
-
-  .tagline {
-    font-size: 22px !important;
-  }
-
-  .btn {
-    font-size: 18px !important;
-    padding: 16px 20px !important;
-    max-width: 360px !important;
-  }
-
-  .hero-img {
-    width: 180px !important;
-    height: 180px !important;
-  }
-
-  .hero {
-    padding: 140px 20px !important;
-  }
-
-  .brand-exact {
-    margin-top: 40px !important;
-  }
-
-  @media (min-width: 768px) {
-
-  .logo {
-    width: 200px !important;
-  }
-
+.hero {
+  text-align: center;
+  padding: 20px 0;
 }
 
-
-.btn {
-  background: linear-gradient(145deg, #cfa85a, #a87e2d);
-  color: #000;
-  border: 1px solid rgba(255, 215, 120, 0.35); /* subtle gold border */
+.cta {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin-top: 15px;
+  background: #e63946;
+  color: #fff;
+  font-size: 18px;
+  border: none;
   border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.btn:hover {
-  background: linear-gradient(145deg, #d9b76a, #b68a35);
-  border: 1px solid rgba(255, 215, 120, 0.55);
+.form input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-box-shadow: inset 0 0 0 1px rgba(255, 215, 120, 0.2);
-
-
-/* FORCE ALL BUTTONS (DESKTOP + MOBILE) */
-a,
-button {
-  background: linear-gradient(145deg, #cfa85a, #a87e2d) !important;
-  color: #000 !important;
-  border: 1px solid rgba(255, 215, 120, 0.35) !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.35) !important;
-  border-radius: 6px !important;
+.section {
+  margin-top: 40px;
 }
 
-/* MOBILE FIX */
-@media (max-width: 768px) {
-  a,
-  button {
-    background: linear-gradient(145deg, #cfa85a, #a87e2d) !important;    
-    box-shadow: 0 4px 12px rgba(0,0,0,0.35) !important;
-  }
+.bullets {
+  margin-top: 15px;
 }
 
-.glow-text {
-  color: #e6c27a; !important;
-  text-shadow:
-    0 0 6px rgba(230, 194, 122, 0.8),
-    0 0 12px rgba(230, 194, 122, 0.6),
-    0 0 18px rgba(230, 194, 122, 0.4) !important;
+.bullets li {
+  margin-bottom: 8px;
 }
 
-@media (max-width: 768px) {
-  .glow-text {
-    color: #e6c27a !important;
-    text-shadow:
-      0 0 6px rgba(230, 194, 122, 0.8),
-      0 0 12px rgba(230, 194, 122, 0.6),
-      0 0 18px rgba(230, 194, 122, 0.4) !important;
-  }
-
-h1, h2, h3, span {
-  text-shadow:
-    0 0 6px rgba(230, 194, 122, 0.8),
-    0 0 12px rgba(230, 194, 122, 0.6),
-    0 0 18px rgba(230, 194, 122, 0.4) !important;
+.highlight {
+  font-weight: bold;
 }
-                 
 
-</style> 
+.footer-cta {
+  text-align: center;
+  margin-top: 40px;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-<a href="https://www.oldproroofing.com" target="_blank">
-<img src="logo.png">
-</a>
-</header>
-
-<div class="social-header">
-<a href="https://www.facebook.com/share/1CYvSMHYJh/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
-<a href="https://www.instagram.com/oldprojosh" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="https://www.tiktok.com/@oldprojosh" target="_blank"><i class="fab fa-tiktok"></i></a>
-</div>
+<div class="container">
 
 <!-- HERO -->
-<section class="hero">
-<div class="hero-content">
+<div class="hero">
+<h1>Your Roof Was Hit.<br>You Just Can’t See It Yet.</h1>
 
-<img src="josh.jpg" class="hero-img">
+<p>Fort Worth homeowners are getting full roof replacements approved right now — most had no idea there was damage.</p>
 
-<div class="brand-exact">
+<p class="highlight">Backed by Old Pro Roofing | Local Storm Inspections</p>
 
-<h1 class="name-script">Josh Holland</h1>
+<form class="form">
+<input type="text" placeholder="Full Name" required>
+<input type="tel" placeholder="Phone Number" required>
+<input type="text" placeholder="Home Address" required>
 
-<div class="gold-bar"></div>
-
-<div class="specialist-row">
-<span class="line"></span>
-<h2 class="glow-text">ROOFING SPECIALIST</h2>
-<span class="line"></span>
+<button class="cta">Check My Roof Now (Free)</button>
+</form>
 </div>
 
-<p class="tagline">
-<span class="outline-soft">Backed By Experience. Built On Trust.
-</p>
+<!-- QUALIFY -->
+<div class="section">
+<h2>You May Already Qualify — Even If Your Roof Looks Fine</h2>
+<p>If your home was hit in the last storm, there’s a strong chance you have damage insurance may cover.</p>
 
-<div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-
-  <a href="tel:6822720473" class="btn" 
-     style="padding: 10px 18px; font-size: 13px; width: auto; min-width: 140px;">
-    Check Out My Roof
-  </a>
-
-  <a href="sms:6822720473" class="btn" 
-     style="padding: 10px 18px; font-size: 13px; width: auto; min-width:140px;">
-    Shoot Me A Text
-  </a>
-
+<ul class="bullets">
+<li>Hail impact damage</li>
+<li>Lifted or weakened shingles</li>
+<li>Hidden issues not visible from the ground</li>
+</ul>
 </div>
 
+<!-- PROOF -->
+<div class="section">
+<h2>Homeowners Nearby Are Getting Approved</h2>
+<p>We’re currently helping homeowners in:</p>
 
-</div>
-</section>
+<ul class="bullets">
+<li>Fort Worth</li>
+<li>Cleburne</li>
+<li>Godley</li>
+</ul>
 
-<!-- TRUST -->
-<div class="trust">
-<span class="glow-text">✔Backed By Old Pro's 20+ Years Of Experience</span>
-<span class="glow-text">✔Fully Insured & Trusted</span>
-<span class="glow-text">✔Free Inspections</span>
-</div>
-
-
-
-
-<section class="section">
-<h2  class="center"><span class="outline-text"style="color:#e0b46a;">Roofing Services in Burleson & Surrounding Areas</span></h2>
-
-<p style="text-align:center; max-width:800px; margin:auto;">
-<span class="outline-soft">I work with homeonwers across Burleson and nearby areas to handle roof inspections, repairs,
-and full replacements. From Crowley to Cleburne, and throughout the Johnson and Tarrant County area.
-I'll make sure you know exactly what's going on and what your options are - simple, honest, and done right.</span>
-</p>
-
-
-
-</section>
-<!-- REVIEWS -->
-<section class="section">
-<h2 class="center"><span class="outline-text"style="color:#e0b46a;">What Homeowners Are Saying</span></h2>
-
-<div class="grid grid-2">
-
-<div class="card">
-<p>★★★★★</p>
-<p class="outline-text"style="color:#e0b46a;">Josh treats you like a person, not just another job. You can tell he actually cares about doing things the right way.</p>
-<p></strong><span class="outline-soft">- Mark R.</span></p>
+<p>Most started with a quick inspection like this.</p>
 </div>
 
-<div class="card">
-<p>★★★★★</p>
-<p class="outline-text"style="color:#e0b46a;">I've dealt with a few roofers before and this was by far the smoothest experience. No pressure, no runaround, he handled it the right way.</p>
-<p><strong><span class="outline-soft">– Lisa T.</span></strong></p>
+<!-- DIFFERENTIATOR -->
+<div class="section">
+<h2>This Isn’t a Sales Appointment</h2>
+<p>This is a simple inspection.</p>
+
+<ul class="bullets">
+<li>I check your roof</li>
+<li>I show you real photos</li>
+<li>I tell you if there’s damage or not</li>
+</ul>
+
+<p>No pressure. No guessing.</p>
 </div>
 
-<div class="card">
-<p>★★★★★</p>
-<p class="outline-text"style="color:#e0b46a;">Josh was easy to deal with from the start. Showed up when he said he would, explained what was going on, and handled everything without making it compicated.</p>
-<p><strong><span class="outline-soft">– David M.</span></strong></p>
+<!-- URGENCY -->
+<div class="section">
+<h2>Inspections Are Being Scheduled This Week</h2>
+<p>I’m already in your area grouping homes together.</p>
+
+<p class="highlight">Once the schedule fills, I move to the next area.</p>
 </div>
 
-<div class="card">
-<p>★★★★★</p>
-<p class="outline-text"style="color:#e0b46a;">I thought I had storm damage but wasn't sure. Josh came out, took his time, and walked me through everything. Didn't try to sell me anything - just gave me a straight answer. That alone, goes a long way!</p>
-<p><strong><span class="outline-soft">– Chris K.</span></strong></p>
+<!-- PERSONAL -->
+<div class="section">
+<h2>You’ll Work Directly With Me</h2>
+<p>I’m Josh — your local roofing specialist.</p>
+
+<p>I handle the inspection, photos, and walk you through everything.</p>
+
+<p>Backed by Old Pro Roofing, but you’ll deal directly with me.</p>
+</div>
+
+<!-- FINAL CTA -->
+<div class="footer-cta">
+<a href="tel:6822720473" class="cta">Call or Text Me Now</a>
 </div>
 
 </div>
-</section>
-
-<!-- GALLERY -->
-<section class="section">
-<h2 class="center"><span class="outline-text"style="color:#e0b46a;">No Shortcuts. No Exceptions.</span></h2>
-
-<div class="grid grid-2 gallery">
-<img src="roof3.jpg" alt="Roof repair in Burleson TX completed by Josh Holland">
-<img src="replacement.jpg" alt="Full roof replacement in Burleson TX">
-<img src="roof2.jpg" alt="New roof installation Burleson TX">
-<img src="damage.jpg" alt="Storm damage roof inspection Joshua TX">
-</div>
-</section>
-
-
-<!-- AREAS -->
-<section class="section">
-<h2 class="center"><span class="outline-text"style="color:#e0b46a;">Areas We Serve</span></h2>
-
-<p class="areas">
-<span class="outline-soft">Burleson<span class="outline-soft"> • Crowley<span class="outline-soft"> • Cleburne<span class="outline-soft"> • Joshua<span class="outline-soft"> • Alvarado<span class="outline-soft"> • Godley<span class="outline-soft"> • Benbrook<span class="outline-soft"> • Fort Worth<span class="outline-soft"> • Arlington<span class="outline-soft"> • Mansfield<span class="outline-soft"> • Waxahachie<span class="outline-soft"> • Midlothian<span class="outline-soft"> • Weatherford<span class="outline-soft"> • Aledo<span class="outline-soft"> • Azle
-</p>
-
-
-
-</section>
-<!-- CONTACT -->
-<section class="section center contact">
-<h2><span class="outline-text"style="color:#e0b46a;">Contact Josh Holland</span></h2>
-
-<p><strong><span class="outline-soft">Phone:</strong> <a href="tel:16822720473"><span class="outline-text"style="color:#e0b46a;">(682) 272-0473</span></a></p>
-
-<p><strong><span class="outline-soft">Email:</strong> <a href="mailto:j.holland@oldproroofing.com"><span class="outline-text"style="color:#e0b46a;">j.holland@oldproroofing.com</span></a></p>
-
-<p><strong><span class="outline-soft">Address:</strong> <a href="https://maps.google.com/?q=140+W+Eldred+St+Burleson+TX+76028" target="_blank"><span class="outline-text"style="color:#e0b46a;">140 W Eldred St, Burleson TX 76028</span></a></p>
-
-</section>
-
-<script src="//code.tidio.co/1zdp4rxpuorbn2knbdpctpbz2a2423gc.js" async></script>
 
 </body>
 </html>

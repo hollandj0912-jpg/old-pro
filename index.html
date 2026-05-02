@@ -9,35 +9,76 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #ffffff;
-  color: #111;
+  background: #000;
+  color: #fff;
 }
 
 .container {
   max-width: 600px;
   margin: auto;
+  background: #111;
   padding: 20px;
 }
 
-h1 {
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+}
+
+.badge {
+  background: #cd7f32;
+  color: #000;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.hero h1 {
   font-size: 28px;
   line-height: 1.2;
   margin-bottom: 10px;
 }
 
-h2 {
-  font-size: 22px;
-  margin-top: 40px;
-}
-
-p {
+.hero p {
   font-size: 16px;
-  line-height: 1.5;
+  color: #ccc;
 }
 
-.hero {
-  text-align: center;
-  padding: 20px 0;
+.highlight {
+  color: #cd7f32;
+  font-weight: bold;
+}
+
+/* TRUST BAR */
+.trust {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* FORM */
+.form input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 .cta {
@@ -45,8 +86,8 @@ p {
   width: 100%;
   padding: 16px;
   margin-top: 15px;
-  background: #e63946;
-  color: #fff;
+  background: linear-gradient(135deg, #cd7f32, #b87333);
+  color: #000;
   font-size: 18px;
   border: none;
   border-radius: 6px;
@@ -55,34 +96,53 @@ p {
   font-weight: bold;
 }
 
-.form input {
-  width: 100%;
-  padding: 14px;
-  margin-top: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
+/* SECTIONS */
 .section {
   margin-top: 40px;
 }
 
+.section h2 {
+  font-size: 22px;
+  color: #cd7f32;
+}
+
+.section p {
+  color: #ccc;
+}
+
 .bullets {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .bullets li {
   margin-bottom: 8px;
 }
 
-.highlight {
-  font-weight: bold;
+/* DIVIDER */
+.divider {
+  height: 1px;
+  background: #333;
+  margin: 30px 0;
 }
 
+/* FOOTER CTA */
 .footer-cta {
+  position: sticky;
+  bottom: 0;
+  background: #000;
+  padding: 10px;
+  border-top: 1px solid #333;
+}
+
+.footer-cta a {
+  display: block;
   text-align: center;
-  margin-top: 40px;
+  background: #cd7f32;
+  color: #000;
+  padding: 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
 }
 </style>
 </head>
@@ -91,13 +151,23 @@ p {
 
 <div class="container">
 
+<!-- HEADER -->
+<div class="header">
+  <img src="logo.png" class="logo" alt="Old Pro Roofing Logo">
+  <div class="badge">DFW Storm Team</div>
+</div>
+
 <!-- HERO -->
 <div class="hero">
 <h1>Your Roof Was Hit.<br>You Just Can’t See It Yet.</h1>
 
-<p>Fort Worth homeowners are getting full roof replacements approved right now — most had no idea there was damage.</p>
+<p>Homeowners in <span class="highlight">Fort Worth, Cleburne & Godley</span> are getting roofs approved right now.</p>
 
-<p class="highlight">Backed by Old Pro Roofing | Local Storm Inspections</p>
+<div class="trust">
+  <span>✔ Old Pro Roofing</span>
+  <span>✔ Insurance Help</span>
+  <span>✔ Local</span>
+</div>
 
 <form class="form">
 <input type="text" placeholder="Full Name" required>
@@ -108,69 +178,53 @@ p {
 </form>
 </div>
 
+<div class="divider"></div>
+
 <!-- QUALIFY -->
 <div class="section">
-<h2>You May Already Qualify — Even If Your Roof Looks Fine</h2>
+<h2>You May Already Qualify</h2>
 <p>If your home was hit in the last storm, there’s a strong chance you have damage insurance may cover.</p>
 
 <ul class="bullets">
 <li>Hail impact damage</li>
 <li>Lifted or weakened shingles</li>
-<li>Hidden issues not visible from the ground</li>
+<li>Hidden leaks</li>
 </ul>
 </div>
 
-<!-- PROOF -->
-<div class="section">
-<h2>Homeowners Nearby Are Getting Approved</h2>
-<p>We’re currently helping homeowners in:</p>
+<div class="divider"></div>
 
-<ul class="bullets">
-<li>Fort Worth</li>
-<li>Cleburne</li>
-<li>Godley</li>
-</ul>
-
-<p>Most started with a quick inspection like this.</p>
-</div>
-
-<!-- DIFFERENTIATOR -->
+<!-- DIFFERENT -->
 <div class="section">
 <h2>This Isn’t a Sales Appointment</h2>
-<p>This is a simple inspection.</p>
-
-<ul class="bullets">
-<li>I check your roof</li>
-<li>I show you real photos</li>
-<li>I tell you if there’s damage or not</li>
-</ul>
-
-<p>No pressure. No guessing.</p>
+<p>I inspect your roof, show you real photos, and tell you the truth — no pressure.</p>
 </div>
+
+<div class="divider"></div>
 
 <!-- URGENCY -->
 <div class="section">
-<h2>Inspections Are Being Scheduled This Week</h2>
-<p>I’m already in your area grouping homes together.</p>
-
-<p class="highlight">Once the schedule fills, I move to the next area.</p>
+<h2>Spots Filling This Week</h2>
+<p>I’m already in your area grouping inspections together. Once the schedule fills, I move on.</p>
 </div>
+
+<div class="divider"></div>
 
 <!-- PERSONAL -->
 <div class="section">
-<h2>You’ll Work Directly With Me</h2>
+<h2>You Work Directly With Me</h2>
 <p>I’m Josh — your local roofing specialist.</p>
 
 <p>I handle the inspection, photos, and walk you through everything.</p>
 
-<p>Backed by Old Pro Roofing, but you’ll deal directly with me.</p>
+<p>Backed by Old Pro Roofing — you deal directly with me.</p>
 </div>
 
-<!-- FINAL CTA -->
+</div>
+
+<!-- STICKY CTA -->
 <div class="footer-cta">
-<a href="tel:6822720473" class="cta">Call or Text Me Now</a>
-</div>
-
+<a href="tel:6822720473">Call / Text Josh Now</a>
 </div>
 
 </body>

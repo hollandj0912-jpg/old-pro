@@ -102,14 +102,18 @@ h1,h2,h3{
 /* REVIEWS */
 .review-card{
   background:#1a1a1a;
-  padding:14px;
+  padding:16px;
   border-radius:10px;
+  border:1px solid #333;
+  font-size:14px;
+  line-height:1.5;
+  color:#ccc;
 }
 
 /* FORM */
 .form-box{
   background:#111;
-  padding:18px;
+  padding:20px;
   border-radius:12px;
   border:1px solid #333;
 }
@@ -117,6 +121,7 @@ h1,h2,h3{
 .form-sub{
   font-size:13px;
   color:#bbb;
+  margin-top:6px;
 }
 
 input{
@@ -126,8 +131,10 @@ input{
   border-radius:6px;
   border:none;
   box-sizing:border-box;
+  font-size:15px;
 }
 
+/* FIX BUTTON COLOR */
 button{
   width:100%;
   padding:14px;
@@ -136,6 +143,9 @@ button{
   border:none;
   border-radius:6px;
   font-weight:600;
+  color:#000 !important;
+  font-size:16px;
+  cursor:pointer;
 }
 
 /* RESPONSE */
@@ -146,18 +156,12 @@ button{
   margin-top:8px;
 }
 
-/* POST FORM */
-.post-form-proof{
-  text-align:center;
-  font-size:13px;
-  color:#aaa;
-}
-
 /* EXTRA IMAGE */
 .desktop-extra-img img{
   width:100%;
   border-radius:10px;
   margin-top:10px;
+  border:1px solid #333;
 }
 
 /* MOBILE REVIEW */
@@ -167,9 +171,10 @@ button{
   padding:12px;
   border-radius:8px;
   margin-top:10px;
+  font-size:14px;
 }
 
-/* ===== BOTTOM SECTION ===== */
+/* ===== BOTTOM ===== */
 
 /* PROOF STRIP */
 .proof-strip{
@@ -196,11 +201,13 @@ button{
 .job-img{
   width:100%;
   border:1px solid #333;
+  margin-top:10px;
 }
 
 .job-result{
   padding:15px;
   border-top:2px solid #cd7f32;
+  margin-top:10px;
 }
 
 /* STATEMENT */
@@ -225,6 +232,7 @@ button{
 .quote{
   color:#aaa;
   font-style:italic;
+  margin-top:10px;
 }
 
 /* ABOUT */
@@ -299,6 +307,7 @@ button{
 
 <div class="hero">
 
+<!-- LEFT -->
 <div>
 <h1>Storm Damage Just Hit Your Area.<br>Most Roofs Qualify — Check Yours Free.</h1>
 
@@ -307,43 +316,52 @@ button{
 <div class="urgency">⚡ Inspections filling up fast — limited slots available</div>
 
 <div class="trust-badges">
-<div>⭐ 5.0 Google Rating</div>
+<div>⭐ 5.0 Google Rating (231 Reviews)</div>
 <div>A+ BBB Rated</div>
-<div>✅ 9 out of 10 roofs qualify</div>
+<div>✅ 9 out of 10 roofs we inspect qualify for replacement</div>
 </div>
 
 <a href="#roof-form" class="mobile-cta">Check My Roof</a>
 
 <img src="roof3.jpg" class="hero-img">
 
-<div class="mobile-review">⭐⭐⭐⭐⭐ Smooth and painless experience</div>
+<div class="mobile-review">
+⭐⭐⭐⭐⭐ “Handled everything quickly and professionally… the whole process was smooth and painless.”
+</div>
 </div>
 
+<!-- RIGHT -->
 <div class="right-stack">
 
-<div class="review-card">⭐⭐⭐⭐⭐ Smooth and painless</div>
-<div class="review-card">⭐⭐⭐⭐⭐ Helped with insurance</div>
+<div class="review-card">
+⭐⭐⭐⭐⭐ “They showed up right on time and did a phenomenal job replacing our roof. When a few minor issues came up, Josh handled everything quickly and professionally, making sure it was all taken care of without any hassle.”
+</div>
+
+<div class="review-card">
+⭐⭐⭐⭐⭐ “From the initial inspection to the final repair, everything was handled professionally and efficiently. They even helped handle my claim, which made the whole process much less stressful.”
+</div>
 
 <div class="form-box" id="roof-form">
-<h3>Check If Your Roof Qualifies</h3>
+
+<h3>Schedule an Inspection</h3>
 
 <p class="form-sub">
 We’ll come out, get on your roof, and tell you exactly what we find.
 </p>
 
 <form>
-<input placeholder="Full Name">
-<input placeholder="Phone">
-<input placeholder="Address">
+<input placeholder="Full Name" required>
+<input placeholder="Phone Number" required>
+<input placeholder="Home Address" required>
 
 <button>Check My Roof Now</button>
 
-<div class="response-time">📞 We typically respond within the hour</div>
-</form>
+<div class="response-time">
+📞 We typically respond within the hour
 </div>
 
-<div class="post-form-proof">
-231+ roofs replaced across DFW — most homeowners are surprised by what their insurance covers.
+</form>
+
 </div>
 
 <div class="desktop-extra-img">
@@ -354,21 +372,22 @@ We’ll come out, get on your roof, and tell you exactly what we find.
 
 </div>
 
-<!-- ===== BOTTOM ===== -->
-
+<!-- BOTTOM -->
 <div class="proof-strip">
 <div class="proof-number">231+</div>
-<div>Roofs Replaced Across DFW<br>
-<span>Most homeowners are surprised by what their insurance covers.</span></div>
+<div class="proof-text">
+Roofs Replaced Across DFW<br>
+<span>Most homeowners are surprised by what their insurance covers.</span>
+</div>
 </div>
 
 <div class="job-section">
-<h3>Recent roof replacement in Burleson TX</h3>
+<h3>Recent roof replacement</h3>
 <img src="main-roof.jpg" class="job-img">
 
 <div class="job-result">
 ✅ <strong>FULL REPLACEMENT — APPROVED.</strong><br>
-Started with a free inspection.
+Started with a free inspection. That’s it.
 </div>
 </div>
 
@@ -387,12 +406,11 @@ Started with a free inspection.
 <h4 class="who">WHO YOU’RE WORKING WITH</h4>
 
 <p>
-I'm a roofing specialist helping homeowners across DFW after storms.
-I'll come out, get on your roof, and tell you exactly what I find.
+I'm a roofing specialist with Old Pro Roofing, LLC, helping homeowners across DFW after storms. I'll come out, get on your roof, and tell you exactly what I find.
 </p>
 
 <p>
-No pressure. Just a straight answer about what's up there.
+No pressure, no guessing. Just a straight answer about what's up there.
 </p>
 
 <div class="about-highlight">

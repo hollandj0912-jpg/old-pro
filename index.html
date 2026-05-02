@@ -29,7 +29,6 @@ body{
   padding:20px;
 }
 
-/* HEADER */
 .header{
   display:flex;
   justify-content:space-between;
@@ -47,7 +46,6 @@ body{
   border-radius:5px;
 }
 
-/* HERO */
 .hero{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -65,7 +63,6 @@ body{
   font-size:18px;
 }
 
-/* TRUST BADGES */
 .trust-badges{
   margin-top:12px;
   display:flex;
@@ -80,14 +77,12 @@ body{
   font-size:13px;
 }
 
-/* IMAGE */
 .hero-img{
   width:100%;
   border-radius:10px;
   margin-top:15px;
 }
 
-/* FORM */
 .form-box{
   background:var(--dark);
   padding:25px;
@@ -117,7 +112,6 @@ button{
   cursor:pointer;
 }
 
-/* ACTION BUTTONS */
 .actions a{
   display:block;
   margin-top:8px;
@@ -131,7 +125,6 @@ button{
 .call{ background:#222; color:#fff; }
 .text{ background:#333; color:#fff; }
 
-/* PROOF */
 .proof{
   background:#1a1a1a;
   padding:15px;
@@ -140,7 +133,6 @@ button{
   text-align:center;
 }
 
-/* SECTIONS */
 .section{
   margin-top:40px;
 }
@@ -153,7 +145,25 @@ button{
   color:var(--gray);
 }
 
-/* STICKY */
+/* ABOUT */
+.about{
+  background:#0d0d0d;
+  padding:20px;
+  border-radius:10px;
+  border:1px solid #222;
+  margin-top:40px;
+}
+
+.about h2{
+  color:var(--bronze);
+}
+
+.about p{
+  color:#bbb;
+  font-size:15px;
+  line-height:1.6;
+}
+
 .sticky{
   position:fixed;
   bottom:0;
@@ -206,19 +216,16 @@ button{
 
 <div class="container">
 
-<!-- HEADER -->
 <div class="header">
   <img src="logo.png" class="logo">
   <div class="badge">DFW Storm Response</div>
 </div>
 
-<!-- HERO -->
 <div class="hero">
 
 <div>
 <h1>Your Roof Was Hit.<br>You Just Can’t See It Yet.</h1>
 
-<!-- TRUST -->
 <div class="trust-badges">
   <div>⭐ 5.0 Google Rating (231 Reviews)</div>
   <div>A+ BBB Rated</div>
@@ -228,11 +235,9 @@ button{
 
 <p><strong>Free inspection. No pressure. Just answers.</strong></p>
 
-<!-- IMAGE -->
-<img src="roof3.jpg" class="hero-img" alt="Roof damage" onerror="this.style.display='none'">
+<img src="roof3.jpg" class="hero-img" onerror="this.style.display='none'">
 </div>
 
-<!-- FORM -->
 <div class="form-box">
 <h3>Check If Your Roof Qualifies</h3>
 
@@ -252,34 +257,40 @@ button{
 
 </div>
 
-<!-- PROOF -->
 <div class="proof">
 🔥 231+ homeowners have trusted Old Pro Roofing — many started with a quick inspection like this.
 </div>
 
-<!-- BEFORE AFTER -->
 <div class="section">
 <h2>Recent Roof We Helped Replace</h2>
-
-<img src="before-after.jpg" class="hero-img" onerror="this.style.display='none'">
-
-<p>Started with a free inspection… ended with a full replacement approved.</p>
+<img src="main-roof.jpg" class="hero-img" onerror="this.style.display='none'">
+<p>Started with a free inspection… ended with a full replacement, approved.</p>
 </div>
 
-<!-- PROCESS -->
 <div class="section">
 <h2>What Happens Next</h2>
-
 <p>I inspect your roof, show you photos, and give you a straight answer.</p>
+<p>Backed by Old Pro Roofing and it's 20+ years of experience.</p>
+</div>
 
-<p>Backed by Old Pro Roofing.</p>
+<!-- ABOUT -->
+<div class="about">
+<h2>About</h2>
+<p>
+I’m a roofing specialist working with Old Pro Roofing, helping homeowners across DFW after storms.
+</p>
+<p>
+Most people I meet aren’t sure if there’s damage or not — my job is to take a look, show you what’s actually going on, and help you understand your options.
+</p>
+<p>
+If everything looks good, I’ll tell you. If there’s damage, I’ll walk you through what to do next.
+</p>
 </div>
 
 </div>
 
-<!-- STICKY CTA -->
 <div class="sticky">
-<a href="tel:6822720473">📞 Call / Text Josh Now</a>
+<a href="tel:6822720473">📞 Call / Text 682-272-0473</a>
 </div>
 
 </body>

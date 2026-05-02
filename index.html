@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- FONT (clean + slightly stronger) -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- PREMIUM TYPOGRAPHY -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
 
 <title>Free Roof Inspection | Old Pro Roofing</title>
 
@@ -21,13 +21,13 @@
 
 body{
   margin:0;
-  padding-bottom:80px;
+  padding-bottom:90px;
   font-family:'Inter', Arial, sans-serif;
   background:var(--black);
   color:var(--white);
+  -webkit-font-smoothing:antialiased;
 }
 
-/* CONTAINER */
 .container{
   max-width:1100px;
   margin:auto;
@@ -79,16 +79,22 @@ body{
   align-items:center;
 }
 
+h1,h2,h3{
+  font-family:'Oswald', sans-serif;
+  letter-spacing:0.5px;
+}
+
 .hero h1{
-  font-size:42px;
-  line-height:1.1;
-  font-weight:700;
+  font-size:46px;
+  line-height:1.05;
+  font-weight:600;
+  text-shadow:0 0 10px rgba(205,127,50,0.25);
 }
 
 .hero p{
   color:var(--gray);
   font-size:18px;
-  font-weight:400;
+  line-height:1.6;
 }
 
 /* TRUST */
@@ -123,7 +129,7 @@ body{
 }
 
 .form-box h3{
-  font-weight:600;
+  font-size:22px;
 }
 
 input{
@@ -149,7 +155,7 @@ button{
   cursor:pointer;
 }
 
-/* ACTIONS */
+/* ACTION BUTTONS */
 .actions a{
   display:block;
   margin-top:8px;
@@ -180,11 +186,13 @@ button{
 
 .section h2{
   color:var(--bronze);
-  font-weight:600;
+  font-size:26px;
 }
 
 .section p{
   color:var(--gray);
+  font-size:18px;
+  line-height:1.6;
 }
 
 /* ABOUT */
@@ -194,15 +202,6 @@ button{
   border-radius:10px;
   border:1px solid #222;
   margin-top:40px;
-}
-
-.about h2{
-  color:var(--bronze);
-}
-
-.about p{
-  color:#bbb;
-  line-height:1.6;
 }
 
 /* STICKY */
@@ -215,27 +214,31 @@ button{
   padding:10px;
 }
 
-.sticky a{
-  display:block;
+.sticky-buttons{
+  display:flex;
+  gap:10px;
   max-width:600px;
   margin:auto;
+}
+
+.sticky-call,
+.sticky-text{
+  flex:1;
   text-align:center;
-  background:var(--bronze);
-  color:#000;
   padding:14px;
   border-radius:6px;
   font-weight:600;
   text-decoration:none;
 }
 
-/* DESKTOP FIX */
-@media(min-width:800px){
-  .sticky{
-    max-width:400px;
-    left:50%;
-    transform:translateX(-50%);
-    border-radius:10px 10px 0 0;
-  }
+.sticky-call{
+  background:var(--bronze);
+  color:#000;
+}
+
+.sticky-text{
+  background:#333;
+  color:#fff;
 }
 
 /* MOBILE */
@@ -245,7 +248,7 @@ button{
   }
 
   .hero h1{
-    font-size:28px;
+    font-size:30px;
     text-align:center;
   }
 
@@ -296,7 +299,7 @@ button{
 <div>A+ BBB Rated</div>
 </div>
 
-<p>Homeowners across Fort Worth & surrounding areas are getting roofs approved right now — most had no idea there was damage.</p>
+<p>Homeowners across Fort Worth & surrounding areas are getting roofs approved right now.</p>
 
 <p><strong>Free inspection. No pressure. Just answers.</strong></p>
 
@@ -316,7 +319,7 @@ button{
 
 <div class="actions">
 <a href="tel:6822720473" class="call">📞 Call Now</a>
-<a href="sms:6822720473" class="text">💬 Text Me</a>
+<a href="sms:6822720473?body=Hey Josh, I saw your site and wanted to ask about a roof inspection" class="text">💬 Text Me</a>
 </div>
 </div>
 
@@ -335,20 +338,23 @@ button{
 <div class="section">
 <h2>What Happens Next</h2>
 <p>I inspect your roof, show you photos, and give you a straight answer.</p>
-<p>Backed by Old Pro Roofing and its 20 + years of experience.</p>
+<p>Backed by Old Pro Roofing and its 20+ years of experience.</p>
 </div>
 
 <div class="about">
 <h2>About</h2>
 <p>I’m a roofing specialist working with Old Pro Roofing, helping homeowners across DFW after storms.</p>
-<p>Most people I meet aren’t sure if there’s damage — I take a look, show you what’s actually going on, and help you understand your options.</p>
 <p>If everything looks good, I’ll tell you. If there’s damage, I’ll walk you through what to do next.</p>
 </div>
 
 </div>
 
+<!-- STICKY -->
 <div class="sticky">
-<a href="tel:6822720473">📞 Call / Text 682-272-0473</a>
+  <div class="sticky-buttons">
+    <a href="tel:6822720473" class="sticky-call">📞 Call Now</a>
+    <a href="sms:6822720473?body=Hey Josh, I saw your site and wanted to ask about a roof inspection" class="sticky-text">💬 Text Me</a>
+  </div>
 </div>
 
 </body>

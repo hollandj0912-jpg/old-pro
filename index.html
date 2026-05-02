@@ -287,9 +287,41 @@ button{
     grid-template-columns:1fr;
   }
 
+@media(max-width:800px){
+
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:30px;
+    text-align:center;
+  }
+
+  .hero p{
+    text-align:center;
+  }
+
+  /* KEEP FORM ON MOBILE */
   .right-stack{
+    display:flex;
+  }
+
+  /* HIDE DESKTOP REVIEWS */
+  .review-card{
     display:none;
   }
+
+  /* KEEP MOBILE REVIEW */
+  .mobile-review{
+    display:block;
+  }
+
+  /* HIDE EXTRA IMAGE */
+  .desktop-extra-img{
+    display:none;
+  }
+}
 
   .desktop-extra-img{
     display:none;
